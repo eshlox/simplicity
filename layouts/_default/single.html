@@ -7,7 +7,7 @@
         {{ if .Params.categories }}
           {{ range $index, $category := .Params.categories }}
             {{ if gt $index 0 }}, {{ end }}
-            <a class="no-shadow" href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ upper . }}</a>,
+            <a class="no-shadow" href="{{ $.LanguagePrefix }}{{ "/categories/" | relURL }}{{ . | urlize }}">{{ upper . }}</a>,
           {{ end }}
         {{ end }}
         {{ .WordCount }} words,
@@ -22,7 +22,7 @@
         <div>
           {{ range $index, $tag := .Params.tags }}
             {{ if gt $index 0 }}, {{ end }}
-            <a href="{{ "tags/" | relURL }}{{ . | urlize }}">
+            <a href="{{ $.LanguagePrefix }}{{ "tags/" | relURL }}{{ . | urlize }}">
               <span class="hash">#</span>{{ . }}
             </a>
           {{ end }}

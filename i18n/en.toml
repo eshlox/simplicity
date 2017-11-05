@@ -1,0 +1,14 @@
+[postsAbout]
+other = "Posts about"
+
+[postsList]
+other = "List of posts"
+
+[homePage]
+other = "Homepage"
+
+[previous]
+other = "previous"
+
+[next]
+other = "next"
