@@ -1,8 +1,7 @@
 import '../styles/styles'
 
 import baguetteBox from 'baguettebox.js'
-import docReady from 'es6-docready'
 
-docReady(() => {
+document.addEventListener('DOMContentLoaded', function(event) {
   baguetteBox.run('article', {})
 })
