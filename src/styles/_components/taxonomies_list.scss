@@ -1,7 +1,6 @@
 .taxonomies-list {
   h1 {
     a {
-      box-shadow: none;
       padding: 0 0.5rem;
 
       svg {
@@ -10,7 +9,7 @@
         vertical-align: middle;
 
         &.rss {
-          fill: #ec8732;
+          fill: $color-coral;
         }
       }
     }

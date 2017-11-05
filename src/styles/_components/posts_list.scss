@@ -1,12 +1,10 @@
 ul.post-list {
-  // padding: 0;
-
   a {
     box-shadow: none;
     font-weight: bold;
 
     li {
-      border-top: 1px solid #eee;
+      border-top: 1px solid $color-silver;
       display: flex;
       justify-content: space-between;
       list-style: none;
@@ -18,7 +16,7 @@ ul.post-list {
       }
 
       .date {
-        color: #ccc;
+        color: $color-silver;
         font-weight: normal;
         margin-left: 2rem;
         white-space: nowrap;
@@ -31,7 +29,7 @@ ul.post-list {
 
     &:last-child {
       li {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid $color-silver;
       }
     }
   }

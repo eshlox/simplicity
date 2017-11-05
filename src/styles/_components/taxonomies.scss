@@ -5,7 +5,7 @@
 
   ul {
     li {
-      color: #ccc;
+      color: $color-silver;
       list-style-type: decimal;
 
       a {
@@ -16,7 +16,7 @@
           vertical-align: middle;
 
           &.rss {
-            fill: #ec8732;
+            fill: $color-coral;
           }
         }
       }

@@ -8,7 +8,7 @@ article {
     }
 
     h4, h5 {
-      color: $color-gray;
+      color: $color-silver;
       line-height: $base-font-size;
       margin: $base-font-size / 4 0;
     }
@@ -21,23 +21,21 @@ article {
       margin: $base-font-size * $base-line-height 0;
 
       pre {
-        // overflow: scroll;
         overflow: auto;
-        // overflow-y: auto;
         padding: $base-font-size * $base-line-height;
       }
     }
 
     pre {
+      background-color: $color-dark-slate-gray;
+      color: $color-light-gray;
       margin: $base-font-size * $base-line-height 0;
       overflow: auto;
       padding: $base-font-size * $base-line-height;
-      color: #d0d0d0;
-      background-color: #202020;
 
       code {
-        color: #d0d0d0;
-        background-color: #202020;
+        color: $color-light-gray;
+        background-color: $color-dark-slate-gray;
       }
     }
 
@@ -75,21 +73,11 @@ article {
   }
 
   footer {
-    // border-bottom: 1px solid #ccc;
-    // border-top: 1px solid #ccc;
     padding: $base-font-size 0;
     text-align: center;
 
     #disqus_thread {
       margin-top: 3rem;
-    }
-
-    .tags {
-
-    }
-
-    .categories {
-      margin-bottom: $base-font-size;
     }
   }
 }

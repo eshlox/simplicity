@@ -8,18 +8,17 @@ nav {
   text-align: right;
 
   div {
-      a {
-        box-shadow: none;
-        padding: 0 0.5rem;
+    a {
+      padding: 0 0.5rem;
 
-        svg {
-          height: 1rem;
-          width: 1rem;
+      svg {
+        height: 1rem;
+        width: 1rem;
 
-          &.rss {
-            fill: #ec8732;
-          }
+        &.rss {
+          fill: $color-coral;
         }
       }
+    }
   }
 }

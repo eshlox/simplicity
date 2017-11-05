@@ -14,8 +14,7 @@ p {
   margin: $base-font-size * $base-line-height 0;
 
   code {
-    // background-color: #e5eff5;
-    color: #d0d0d0;
-    background-color: #202020;
+    color: $color-light-gray;
+    background-color: $color-dark-slate-gray;
   }
 }
