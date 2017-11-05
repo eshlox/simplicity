@@ -1,0 +1,21 @@
+body {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1 {
+  font-size: $font-size-h1;
+  line-height: $base-line-height * 2;
+  margin: $base-font-size * $base-line-height 0;
+}
+
+p {
+  line-height: $base-line-height;
+  margin: $base-font-size * $base-line-height 0;
+
+  code {
+    // background-color: #e5eff5;
+    color: #d0d0d0;
+    background-color: #202020;
+  }
+}

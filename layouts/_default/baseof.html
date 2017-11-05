@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ or .Params.language .Site.LanguageCode }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    {{ partial "navbar.html" . }}
+    <main{{ if .IsHome }} class="homepage"{{ end }}>
+      {{ block "main" . -}}{{- end }}
+    </main>
+    {{ partial "footer.html" . }}
+    <script src='{{ print "/assets/js/" $.Site.Data.assets.main.js | relURL }}'></script>
+    {{ template "_internal/google_analytics_async.html" . }}
+  </body>
+</html>

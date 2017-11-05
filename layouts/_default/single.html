@@ -1,0 +1,34 @@
+{{ define "main" }}
+  <article>
+    <header>
+      <h4>{{ .Date.Format "January 2, 2006" }}</h4>
+      <h1>{{ .Title }}</h1>
+      <h5>
+        {{ if .Params.categories }}
+          {{ range $index, $category := .Params.categories }}
+            {{ if gt $index 0 }}, {{ end }}
+            <a class="clean" href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ upper . }}</a>,
+          {{ end }}
+        {{ end }}
+        {{ .WordCount }} words,
+        ~{{ .ReadingTime }} min
+      </h5>
+    </header>
+    <section>
+      {{ .Content }}
+    </section>
+    <footer>
+      {{ if .Params.tags }}
+        <div class="tags">
+          {{ range $index, $tag := .Params.tags }}
+            {{ if gt $index 0 }}, {{ end }}
+            <a href="{{ "tags/" | relURL }}{{ . | urlize }}">
+              <span class="hash">#</span>{{ . }}
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+      {{ template "_internal/disqus.html" . }}
+    </footer>
+  </article>
+{{ end }}

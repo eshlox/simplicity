@@ -1,0 +1,23 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title> {{ .Title }} &middot; {{ .Site.Title }} </title>
+
+{{ .Hugo.Generator }}
+
+<!-- CSS -->
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+<link rel='stylesheet' href='{{ print "/assets/css/" $.Site.Data.assets.main.css | relURL  }}'>
+
+<!-- Icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+{{ if .RSSLink }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end }}
+
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/google_news.html" . }}
+{{ template "_internal/schema.html" . }}
+{{ template "_internal/twitter_cards.html" . }}

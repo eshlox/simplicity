@@ -1,0 +1,18 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: $color-white;
+  display: grid;
+  font-family: 'Ubuntu', sans-serif;
+  // font-size: $base-font-size;
+  grid-template-rows: 50px auto 50px;
+  height: 100%;
+  // line-height: $base-line-height;
+  width: 100%;
+
+  // background-image: linear-gradient(#ccc 1px, transparent 1px);
+  // background-size: 100% 12px;
+}

@@ -1,0 +1,25 @@
+.taxonomies {
+  h1 {
+    line-height: $font-size-h1 * $base-line-height;
+  }
+
+  ul {
+    li {
+      color: #ccc;
+      list-style-type: decimal;
+
+      a {
+        svg {
+          height: 0.7rem;
+          margin-left: 0.7rem;
+          width: 0.7rem;
+          vertical-align: middle;
+
+          &.rss {
+            fill: #ec8732;
+          }
+        }
+      }
+    }
+  }
+}
