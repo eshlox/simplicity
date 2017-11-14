@@ -46,8 +46,9 @@ p {
   }
 
   img {
-    margin: 2rem 0;
     @include shadow(1%, 100%);
+
+    margin: 2rem auto;
   }
 }
 
@@ -63,6 +64,8 @@ figure {
 
   img {
     @include shadow(1%, 100%);
+
+    margin: 0 auto;
   }
 
   // a {
