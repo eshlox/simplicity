@@ -1,13 +1,13 @@
 main {
+  flex: 1 1 auto;
+
+  box-sizing: border-box;
   margin: 0 auto;
   max-width: $page-max-width;
+  padding: 1rem 2rem;
   width: 100%;
 
   &.homepage {
     align-self: center;
-  }
-
-  > * {
-    padding: 1rem 2rem;
   }
 }

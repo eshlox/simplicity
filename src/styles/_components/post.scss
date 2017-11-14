@@ -3,77 +3,25 @@ article {
     text-align: center;
 
     h1 {
-      line-height: $font-size-h1 * $base-line-height;
       margin: 0 auto;
     }
 
-    h4, h5 {
+    p {
       color: $color-silver;
-      line-height: $base-font-size;
-      margin: $base-font-size / 4 0;
+      font-size: 0.8rem;
+      margin: 0 auto;
+
+      a {
+        color: $color-silver;
+      }
     }
   }
 
   section {
-    margin: $base-font-size * ($base-line-height * 2) 0;
-
-    div.highlight {
-      margin: $base-font-size * $base-line-height 0;
-
-      pre {
-        overflow: auto;
-        padding: $base-font-size * $base-line-height;
-      }
-    }
-
-    pre {
-      background-color: $color-dark-slate-gray;
-      color: $color-light-gray;
-      margin: $base-font-size * $base-line-height 0;
-      overflow: auto;
-      padding: $base-font-size * $base-line-height;
-
-      code {
-        color: $color-light-gray;
-        background-color: $color-dark-slate-gray;
-      }
-    }
-
-    p {
-      img {
-        border-radius: 1%;
-        box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.75);
-        display: block;
-        margin: $base-font-size * $base-line-height * 2 auto;
-        max-width: 100%;
-      }
-    }
-
-    figure {
-      a {
-        img {
-          border-radius: 1%;
-          box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.75);
-          display: block;
-          margin: $base-font-size * $base-line-height * 2 auto 0;
-          max-width: 100%;
-        }
-      }
-
-      figcaption {
-        text-align: center;
-      }
-    }
-
-    iframe {
-      box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.75);
-      display: block;
-      margin: $base-font-size * $base-line-height * 2 auto;
-    }
+    margin: 3rem 0;
   }
 
   footer {
-    padding: $base-font-size 0;
     text-align: center;
 
     #disqus_thread {

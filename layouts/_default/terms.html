@@ -7,6 +7,9 @@
           <a href="{{ $.LanguagePrefix }}/{{ $.Data.Plural }}/{{ .Term | urlize }}">
             <span class="hash">#</span>{{ .Term }}
           </a>
+          <sup>
+            {{ .Count }}
+          </sup>
           <a class="no-shadow" href="{{ $.LanguagePrefix }}/{{ $.Data.Plural }}/{{ .Term | urlize }}/index.xml">
             <svg class="rss" aria-labelledby="simpleicons-rss-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title id="simpleicons-rss-icon">RSS icon</title>

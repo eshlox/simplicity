@@ -1,33 +1,35 @@
 {{ define "main" }}
   <article>
     <header>
-      <h4>{{ .Date.Format "January 2, 2006" }}</h4>
-      <h1>{{ .Title }}</h1>
-      <h5>
+      <p>
+        <time datetime="{{ .Date.Format "2006-01-02 03:04" }}">
+          {{ .Date.Format "January 2, 2006" }},
+        </time>
         {{ if .Params.categories }}
           {{ range $index, $category := .Params.categories }}
             {{ if gt $index 0 }}, {{ end }}
-            <a class="no-shadow" href="{{ $.LanguagePrefix }}{{ "/categories/" | relURL }}{{ . | urlize }}">{{ upper . }}</a>,
+            <a href="{{ $.LanguagePrefix }}{{ "/categories/" | relURL }}{{ . | urlize }}">{{ upper . }}</a>
           {{ end }}
         {{ end }}
-        {{ .WordCount }} words,
-        ~{{ .ReadingTime }} min
-      </h5>
-    </header>
-    <section>
-      {{ .Content }}
-    </section>
-    <footer>
-      {{ if .Params.tags }}
-        <div>
+      </p>
+      <h1>
+        {{ .Title }}
+      </h1>
+      <p>
+        {{ if .Params.tags }}
           {{ range $index, $tag := .Params.tags }}
             {{ if gt $index 0 }}, {{ end }}
             <a href="{{ $.LanguagePrefix }}{{ "tags/" | relURL }}{{ . | urlize }}">
               <span class="hash">#</span>{{ . }}
             </a>
           {{ end }}
-        </div>
-      {{ end }}
+        {{ end }}
+      </p>
+    </header>
+    <section>
+      {{ .Content }}
+    </section>
+    <footer>
       {{ template "_internal/disqus.html" . }}
     </footer>
   </article>

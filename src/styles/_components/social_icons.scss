@@ -3,9 +3,13 @@
     box-shadow: none;
 
     svg {
-      height: 1.5rem;
+      height: 1rem;
       padding: 0 0.3rem;
-      width: 1.5rem;
+      width: 1rem;
+
+      &.rss {
+        fill: $color-coral;
+      }
     }
   }
 }

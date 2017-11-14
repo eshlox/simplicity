@@ -1,13 +1,20 @@
-html {
+html, body {
+  font-size: $base-font-size;
+
+  @media (max-width: 640px) {
+    font-size: $base-font-size - 2;
+  }
+
   height: 100%;
+  line-height: $base-line-height;
+  margin: 0;
+  padding: 0;
   width: 100%;
 }
 
 body {
   background-color: $color-white;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   font-family: 'Ubuntu', sans-serif;
-  grid-template-rows: 50px auto 50px;
-  height: 100%;
-  width: 100%;
 }

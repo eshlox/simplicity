@@ -1,6 +1,6 @@
 {{ define "main" }}
   <div class="homepage">
-    <img class="avatar" src="https://www.gravatar.com/avatar/{{ md5 .Site.Params.email }}?s=100&d=identicon">
+    <img class="avatar" src="https://www.gravatar.com/avatar/{{ md5 .Site.Author.gravataremail }}?s=100&d=identicon">
     {{ .Content }}
     {{ partial "social_icons.html" . }}
   </div>

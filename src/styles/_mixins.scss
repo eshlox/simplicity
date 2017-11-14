@@ -1,0 +1,13 @@
+@mixin shadow($border-radius, $width) {
+    border-radius: 1%;
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.75);
+    display: block;
+
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+
+    @if $width {
+        max-width: $width;
+    }
+}

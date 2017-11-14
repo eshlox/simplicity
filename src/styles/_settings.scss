@@ -1,9 +1,7 @@
 // General
-$base-font-size: 21px;
-$base-line-height: 1.6;
-$page-max-width: 65rem;
-
-$font-size-h1: $base-font-size * 2;
+$base-font-size: 20px;
+$base-line-height: 1.5;
+$page-max-width: 50rem;
 
 // Colors
 $color-black: #000;
@@ -13,3 +11,6 @@ $color-dodger-blue: #1e90ff;
 $color-light-gray: #d0d0d0;
 $color-silver: #c0c0c0;
 $color-white: #fff;
+
+$hr-botder-bottom-color: rgba(255, 255, 255, 0.3);
+$hr-border-top-color: rgba(0, 0, 0, 0.1);
