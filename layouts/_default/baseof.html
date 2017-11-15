@@ -9,7 +9,7 @@
       {{ block "main" . -}}{{- end }}
     </main>
     {{ partial "footer.html" . }}
-    <script src='{{ print "/assets/js/" $.Site.Data.assets.main.js | relURL }}'></script>
+    <script src="{{ print "/assets/js/" $.Site.Data.assets.main.js | relURL }}"></script>
     {{ template "_internal/google_analytics_async.html" . }}
   </body>
 </html>
