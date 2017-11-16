@@ -168,9 +168,9 @@ Then, anywhere in the document, you define your link label like this, on a line 
 
 ![Alt text](/images/image-1.jpg "Photo by Ales Krivec on Unsplash")
 
-{{< img src="/images/image-1.jpg" title="Photo by Ales Krivec on Unsplash" >}}
-
 {{< figure src="/images/image-1.jpg" title="Photo by Ales Krivec on Unsplash" >}}
+
+{{< figure src="/images/image-1.jpg" title="Photo by Ales Krivec on Unsplash" lightbox="true" >}}
 
 ---
 

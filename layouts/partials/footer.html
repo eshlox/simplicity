@@ -1,5 +1,5 @@
-<footer class="global">
-  {{ if not .IsHome }}
+{{ if not .IsHome }}
+  <footer class="global">
     {{ partial "social_icons.html" . }}
-  {{ end }}
-</footer>
+  </footer>
+{{ end }}

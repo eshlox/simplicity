@@ -8,6 +8,7 @@ main {
   width: 100%;
 
   &.homepage {
-    align-self: center;
+    align-items: center;
+    display: flex;
   }
 }
