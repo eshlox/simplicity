@@ -5,7 +5,7 @@
       {{ range .Data.Terms.Alphabetical }}
         <li>
           <a href="{{ $.LanguagePrefix }}/{{ $.Data.Plural }}/{{ .Term | urlize }}">
-            <span class="hash">#</span>{{ .Term }}
+            {{ if eq $.Data.Plural "tags" }}<span class="hash">#</span>{{ end }}{{ .Term }}
           </a>
           <sup>
             {{ .Count }}
