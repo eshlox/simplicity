@@ -3,7 +3,10 @@
   {{ range $paginator.Pages }}
     <a href="{{ .Permalink | relURL }}">
       <li>
-        <span>{{ .Title }}</span>
+        <span>
+            <span class="language">[{{ upper .Params.Language }}]</span>
+            {{ .Title }}
+        </span>
         <span class="date">{{ .Date.Format "2006-01-02" }}</span>
       </li>
     </a>
