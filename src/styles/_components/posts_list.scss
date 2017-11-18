@@ -1,4 +1,6 @@
 ul.post-list {
+  padding: 0;
+
   a {
     box-shadow: none;
     font-weight: bold;
@@ -13,6 +15,10 @@ ul.post-list {
       @media (max-width: 40rem) {
         display: block;
         text-align: center;
+      }
+
+      .language {
+        color: $color-silver;
       }
 
       .date {
