@@ -182,8 +182,15 @@ twitterwidget {
 }
 
 iframe {
-  @include shadow(0, 100%);
   margin: 2rem auto !important; // !important required to override Instagram styles
+
+  &.youtube, &.vimeo {
+    display: block;
+  }
+
+  // &.instagram-media, &.speakerdeck-iframe {
+  //   @include shadow(0, 100%);
+  // }
 }
 
 ul {
