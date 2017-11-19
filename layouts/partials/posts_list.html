@@ -4,8 +4,7 @@
     <a href="{{ .Permalink | relURL }}">
       <li>
         <span>
-            <span class="language">[{{ upper .Params.Language }}]</span>
-            {{ .Title }}
+          {{ .Title }}
         </span>
         <span class="date">{{ .Date.Format "2006-01-02" }}</span>
       </li>
