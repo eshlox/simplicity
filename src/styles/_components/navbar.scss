@@ -4,6 +4,18 @@ nav {
 
   .title {
     grid-column: 1;
+
+    svg {
+      color: $color-black;
+      height: auto;
+      margin-right: 0.5rem;
+      width: $navbarHeight/2;
+      vertical-align: middle;
+    }
+
+    span {
+      vertical-align: middle;
+    }
   }
 
   .nav {
