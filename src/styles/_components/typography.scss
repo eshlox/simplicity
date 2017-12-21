@@ -1,54 +1,52 @@
 h1 {
+  @include paragraph-margin(1.2rem);
+
   font-size: 2rem;
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.9rem;
-  margin-top: 1.4rem;
+  @include paragraph-margin(1.1rem);
+
+  font-size: 1.6rem;
 }
 
 h3 {
-  font-size: 1.17rem;
-  margin-bottom: 0.8rem;
-  margin-top: 1.3rem;
+  @include paragraph-margin(1.0rem);
+
+  font-size: 1.3rem;
 }
 
-
 h4 {
+  @include paragraph-margin(0.9rem);
+
   font-size: 1rem;
-  margin-bottom: 0.7rem;
-  margin-top: 1.2rem;
 }
 
 h5 {
-  font-size: 0.83rem;
-  margin-bottom: 0.6rem;
-  margin-top: 1.3rem;
+  @include paragraph-margin(0.8rem);
+
+  font-size: 0.8rem;
 }
 
 h6 {
-  font-size: 0.75rem;
-  margin-bottom: 0.5rem;
-  margin-top: 1.2rem;
+  @include paragraph-margin(0.7rem);
+
+  font-size: 0.7rem;
 }
 
 p {
-  margin-bottom: $base-font-size * 2;
-  margin: 2rem auto;
+  margin-bottom: 2rem;
 
   code {
-    background-color: $color-dark-slate-gray;
-    color: $color-silver;
-    padding: 0.2rem;
+    background-color: $color-white-smoke;
+    color: $color-indian-red;
+    padding: 0.2rem 0.3rem;
   }
 
   img {
     @include shadow(1%, 100%);
 
-    margin: 2rem auto;
+    margin: 3rem auto;
   }
 }
 
@@ -57,10 +55,12 @@ hr {
   border-bottom: 1px solid $hr-botder-bottom-color;
   border-top: 1px solid $hr-border-top-color;
   height: 0;
+  margin-bottom: $itemMargin;
+  margin-top: $itemMargin;
 }
 
 figure {
-  margin: 2rem auto;
+  margin: $itemMargin auto;
 
   img {
     @include shadow(1%, 100%);
@@ -68,89 +68,53 @@ figure {
     margin: 0 auto;
   }
 
-  // a {
-  //   img {
-  //     @include shadow(1%, 100%);
-  //   }
-  // }
-
   figcaption {
     font-style: italic;
+    margin-top: 1rem;
     text-align: center;
   }
 }
 
 blockquote {
-  margin: 2rem auto;
   border-left: 0.5rem $color-silver solid;
-  margin: 2rem 0;
-
-  p {
-    font-style: italic;
-    padding: 0 1rem;
-  }
+  font-style: italic;
+  margin: $itemMargin auto;
+  width: 60%;
+  padding: 1rem;
 }
 
 pre {
-  margin: 2rem auto;
-  padding: 1rem;
+  margin: $itemMargin auto;
   background-color: $color-dark-slate-gray;
   color: $color-light-gray;
+  display: grid;
   overflow: auto;
+  padding: 1rem;
+  // min-width: 0;
 
   code {
     color: $color-light-gray;
     background-color: $color-dark-slate-gray;
+    min-width: 0;
+    width: 50vw; // FIXME: Ugly hack for Firefox? The code tag is widther that window.
   }
 }
 
 div.gist {
-  margin: 2rem 0;
+  margin-bottom: $itemMargin;
+  margin-top: $itemMargin;
 }
 
 div.highlight {
-  margin: 2rem auto;
-
-  pre {
-    // margin-top: 0;
-    // margin-bottom: 0;
-    overflow: auto;
-    padding: 1rem;
-
-    // padding-top: 0;
-    // padding-bottom: 0;
-    // font-size: 1.2rem;
-    // line-height: 3.2rem;
-    // background-image: linear-gradient(#eee 1px, transparent 1px);
-    // background-size: 100% 1rem;
-
-    // code {
-    //   font-size: 1.2rem;
-    //   line-height: 3.2rem;
-    //   padding-top: 1rem;
-    //   padding-bottom: 1rem;
-    //   margin-top: 0;
-    //   margin-bottom: 0;
-    // }
-
-    code {
-      // font-size: 1rem;
-      // line-height: 2rem;
-      // margin: 0;
-      // padding: 0;
-
-      // * {
-      //   margin: 0;
-      //   padding: 0;
-      // }
-    }
-  }
+  margin-bottom: $itemMargin;
+  margin-top: $itemMargin;
 }
 
-table {
+table:not(.highlight) {  // disable for table inside Github gist
   border-collapse: collapse;
   border-style: hidden;
-  margin: 2rem auto;
+  margin-bottom: $itemMargin;
+  margin-top: $itemMargin;
   width: 100%;
 
   thead {
@@ -170,30 +134,16 @@ table {
       td {
         border: 1px solid $color-silver;
         padding: 0.5rem;
-        // text-align: center;
         vertical-align: middle;
       }
     }
   }
 }
 
-twitterwidget {
-  margin: 2rem auto !important; // !important required to override Twitter styles
-}
-
-iframe {
-  margin: 2rem auto !important; // !important required to override Instagram styles
-
-  &.youtube, &.vimeo {
-    display: block;
-  }
-
-  // &.instagram-media, &.speakerdeck-iframe {
-  //   @include shadow(0, 100%);
-  // }
-}
-
 ul {
+  margin-bottom: $itemMargin;
+  margin-top: $itemMargin;
+
   &.task-list {
     list-style: none;
     padding-left: 20px;
@@ -208,21 +158,24 @@ ul {
   }
 }
 
-.videowrapper {
-  clear: both;
-  float: none;
-  height: 0;
-  margin-bottom: 5rem;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  position: relative;
-  width: 100%;
+.gist {
+  display: grid;
+  margin-bottom: $itemMargin;
+  margin-top: $itemMargin;
 
-  iframe {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  .gist-file {
+    overflow: auto;
   }
+}
+
+.twitter-tweet {
+  margin: $itemMargin auto !important;
+
+  @media (max-width: 550px) {
+    width: 0 !important;
+  }
+}
+
+iframe.instagram-media {
+  margin: $itemMargin auto !important;
 }

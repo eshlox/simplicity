@@ -1,13 +1,7 @@
 .homepage {
-  width: 100%;
+  padding: 0 $padding-left-right;
 
   .avatar {
     border-radius: 50%;
-  }
-
-  .social-icons {
-    border-top: 1px solid $color-silver;
-    padding-top: 1rem;
-    text-align: right;
   }
 }

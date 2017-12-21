@@ -1,16 +1,13 @@
 ul.post-list {
-  padding: 0;
+  padding: 0 $padding-left-right;
 
   a {
-    box-shadow: none;
-    font-weight: bold;
-
     li {
       border-top: 1px solid $color-silver;
       display: flex;
       justify-content: space-between;
       list-style: none;
-      padding: 1rem 0;
+      padding: 0.5rem 0;
 
       @media (max-width: 40rem) {
         display: block;
@@ -19,6 +16,7 @@ ul.post-list {
 
       .date {
         color: $color-silver;
+        font-style: italic;
         font-weight: normal;
         margin-left: 2rem;
         white-space: nowrap;

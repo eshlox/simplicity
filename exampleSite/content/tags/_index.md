@@ -1,5 +1,5 @@
 ---
-title: ~/tags
+title: Tags
 language: en
 slug: /tags/
 ---

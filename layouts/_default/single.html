@@ -3,14 +3,14 @@
     <header>
       <p>
         <time datetime="{{ .Date.Format "2006-01-02 03:04" }}">
-          {{- .Date.Format "January 2, 2006" -}},
+          {{- .Date.Format "2006-01-02" -}}
         </time>
-        {{ if .Params.categories }}
+        {{- if .Params.categories }} &bull;
           {{ range $index, $category := .Params.categories }}
             {{ if gt $index 0 }}, {{ end }}
             <a href="{{ $.LanguagePrefix }}{{ "/categories/" | relURL }}{{ . | urlize }}">{{- upper . -}}</a>
           {{ end }}
-        {{ end }}
+        {{- end -}}
       </p>
       <h1>
         {{- .Title -}}

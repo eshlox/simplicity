@@ -1,11 +1,9 @@
 <ul class="post-list">
   {{ $paginator := .Paginate (where .Data.Pages "Type" "posts") }}
   {{ range $paginator.Pages }}
-    <a href="{{ .Permalink | relURL }}">
+    <a href="{{ .Permalink | relURL }}" title="{{ .Title }}">
       <li>
-        <span>
-          {{ .Title }}
-        </span>
+        <span>{{ .Title }}</span>
         <span class="date">{{ .Date.Format "2006-01-02" }}</span>
       </li>
     </a>

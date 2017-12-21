@@ -1,5 +1,5 @@
 ---
-title: ~/categories
+title: Categories
 language: en
 slug: /categories/
 ---

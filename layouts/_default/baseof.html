@@ -5,7 +5,7 @@
   </head>
   <body>
     {{ partial "navbar.html" . }}
-    <main{{ if .IsHome }} class="homepage"{{ end }}>
+    <main>
       {{ block "main" . -}}{{- end }}
     </main>
     {{ partial "footer.html" . }}

@@ -1,13 +1,8 @@
 main {
-  flex: 1 1 auto;
-
-  box-sizing: border-box;
-  margin: 0 auto;
+  justify-self: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
   max-width: $page-max-width;
-  padding: 1rem 2rem;
+  min-width: 0;
   width: 100%;
-
-  &.homepage {
-    align-items: center;
-  }
 }

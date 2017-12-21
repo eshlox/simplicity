@@ -2,6 +2,16 @@
   <div class="homepage">
     <img class="avatar" src="https://www.gravatar.com/avatar/{{ md5 .Site.Author.gravataremail }}?s=100&d=identicon">
     {{ .Content }}
-    {{ partial "social_icons.html" . }}
+    <hr>
+    <ul>
+      <li>
+        <a href="/posts/">{{ i18n "postsList" . }}</a></li>
+      <li>
+        <a href="/categories/">{{ i18n "categories" . }}</a>
+      </li>
+      <li>
+        <a href="/tags/">{{ i18n "tags" . }}</a>
+      </li>
+    </ul>
   </div>
 {{ end }}

@@ -1,5 +1,5 @@
 [postsAbout]
-other = "Posty o"
+other = "Posty o:"
 
 [postsList]
 other = "Lista postów"
@@ -12,3 +12,9 @@ other = "poprzednie"
 
 [next]
 other = "następne"
+
+[categories]
+other = "Kategorie"
+
+[tags]
+other = "Tagi"

@@ -1,16 +1,22 @@
 // General
-$base-font-size: 20px;
+$base-font-size: 18px;
 $base-line-height: 1.5;
-$page-max-width: 50rem;
+$page-max-width: 60rem;
+$padding-left-right: 1rem;
+$navbarHeight: 3rem;
+$footerHeigth: 3rem;
+$itemMargin: 3rem;
 
 // Colors
 $color-black: #000;
-$color-coral: #ec8732;
 $color-dark-slate-gray: #202020;
 $color-dodger-blue: #1e90ff;
+$color-indian-red: #f0506e;
 $color-light-gray: #d0d0d0;
+$color-rss: #f26522;
 $color-silver: #c0c0c0;
 $color-white: #fff;
+$color-white-smoke: #f8f8f8;
 
 $hr-botder-bottom-color: rgba(255, 255, 255, 0.3);
 $hr-border-top-color: rgba(0, 0, 0, 0.1);

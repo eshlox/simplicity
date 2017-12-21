@@ -1,22 +1,10 @@
 .taxonomies {
+  padding: 0 $padding-left-right;
+
   ul {
     li {
       color: $color-silver;
       list-style-type: decimal;
-
-      a {
-
-        svg {
-          height: 0.7rem;
-          margin-left: 0.7rem;
-          width: 0.7rem;
-          vertical-align: middle;
-
-          &.rss {
-            fill: $color-coral;
-          }
-        }
-      }
     }
   }
 }

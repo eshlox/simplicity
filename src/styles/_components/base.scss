@@ -1,11 +1,7 @@
 html, body {
   font-size: $base-font-size;
-
-  @media (max-width: 640px) {
-    font-size: $base-font-size - 2;
-  }
-
   height: 100%;
+  height: 100vh;  // To make sure it takes 100% height on Safari
   line-height: $base-line-height;
   margin: 0;
   padding: 0;
@@ -14,7 +10,24 @@ html, body {
 
 body {
   background-color: $color-white;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Ubuntu', sans-serif;
+  display: grid;
+  font-family: 'Roboto', sans-serif;
+  grid-template-areas: "nav" "main" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: $navbarHeight 1fr $footerHeigth;
+}
+
+nav {
+  align-self: center;
+  grid-area: nav;
+}
+
+main {
+  // align-self: center;
+  grid-area: main;
+}
+
+footer {
+  align-self: center;
+  grid-area: footer;
 }

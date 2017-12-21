@@ -1,9 +1,10 @@
 .pagination {
+  padding: 0 $padding-left-right;
+
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-top: 4rem;
-  padding-left: 0;
+  margin-top: 1.5rem;
 
   li {
     display: inline;

@@ -1,5 +1,14 @@
 .taxonomies-list {
-  h1 {
+  padding: 0 $padding-left-right;
+
+  h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    span {
+      color: $color-silver;
+    }
+
     a {
       padding: 0 0.5rem;
 
@@ -9,7 +18,7 @@
         vertical-align: middle;
 
         &.rss {
-          fill: $color-coral;
+          color: $color-rss;
         }
       }
     }

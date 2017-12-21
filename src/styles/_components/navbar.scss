@@ -1,23 +1,20 @@
 nav {
-  align-items: center;
-  display: flex;
-  flex: 0 0 auto;
-  height: 3rem;
-  justify-content: space-between;
-  padding: 0 1.5rem;
-  text-align: right;
+  display: grid;
+  padding: 0 $padding-left-right;
 
-  div {
+  .title {
+    grid-column: 1;
+  }
+
+  .nav {
+    grid-column: 2;
+    justify-self: end;
+
     a {
-      padding: 0 0.5rem;
-
       svg {
-        height: 1rem;
-        width: 1rem;
-
-        &.rss {
-          fill: $color-coral;
-        }
+        color: $color-rss;
+        height: auto;
+        width: $navbarHeight/2;
       }
     }
   }
