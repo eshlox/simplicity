@@ -2,6 +2,13 @@
   <div class="title">
     {{ if not .IsHome }}
       <a href="{{ $.LanguagePrefix }}{{ "/" | relURL }}" title="{{ i18n "homePage" }}">
+        {{ .Site.Author.homepagetext }}
+      </a>
+    {{ end }}
+  </div>
+  <div class="nav">
+    {{ if not .IsHome }}
+      <a href="{{ $.LanguagePrefix }}{{ "/" | relURL }}" title="{{ i18n "homePage" }}">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -17,12 +24,7 @@
           <polyline points="9 22 9 12 15 12 15 22" />
         </svg>
       </a>
-      <span>
-        {{ .Site.Author.homepagetext }}
-      </span>
     {{ end }}
-  </div>
-  <div class="nav">
     <a href="{{ .RSSLink }}" title="RSS">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -34,6 +36,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
+        class="rss"
       >
         <path d="M4 11a9 9 0 0 1 9 9" />
         <path d="M4 4a16 16 0 0 1 16 16" />

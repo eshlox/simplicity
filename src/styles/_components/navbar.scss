@@ -1,42 +1,46 @@
 nav {
   display: grid;
+  height: 100%;
+  line-height: 1;
   padding: 0 $padding-left-right;
 
   .title {
+    align-self: center;
     grid-column: 1;
 
     a {
+      vertical-align: middle;
+
+      &:hover, &:active, &:visited {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .nav {
+    align-self: center;
+    grid-column: 2;
+    justify-self: end;
+
+    a {
+      display: inline-block;
+      height: $navbarHeight / 2;
+      margin-left: $navbarHeight / 2;
+      width: $navbarHeight / 2;
+
       &:hover, &:active, &:visited {
         text-decoration: none;
       }
 
       svg {
         color: $color-black;
-        height: auto;
-        margin-right: 0.5rem;
-        width: $navbarHeight/2;
+        height: $navbarHeight / 2;
+        width: $navbarHeight / 2;
         vertical-align: middle;
-      }
 
-      span {
-        vertical-align: middle;
-      }
-    }
-  }
-
-  .nav {
-    grid-column: 2;
-    justify-self: end;
-
-    a {
-      &:hover, &:active, &:visited {
-        text-decoration: none;
-      }
-
-      svg {
-        color: $color-rss;
-        height: auto;
-        width: $navbarHeight/2;
+        &.rss {
+          color: $color-rss;
+        }
       }
     }
   }
