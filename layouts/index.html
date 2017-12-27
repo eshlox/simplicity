@@ -13,5 +13,18 @@
         <a href="/tags/">{{ i18n "tags" . }}</a>
       </li>
     </ul>
+    <hr>
+    {{ if .Site.Menus.pages }}
+      <ul>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.pages }}
+          <li>
+            <a href="{{ .URL }}">
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
   </div>
 {{ end }}
