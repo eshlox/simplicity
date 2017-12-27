@@ -19,3 +19,13 @@ title = "Simplicity - Hugo theme"
   posts = "/:year/:month/:day/:slug/"
 [pygmentsOptions]
   linenos = false
+[[menu.pages]]
+  name = "My projects"
+  weight = -100
+  identifier = "my-projects"
+  url = "/my-projects/"
+[[menu.pages]]
+  name = "My photos"
+  weight = -90
+  identifier = "my-photos"
+  url = "/my-photos/"
