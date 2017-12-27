@@ -25,7 +25,7 @@
         </svg>
       </a>
     {{ end }}
-    <a href="{{ .RSSLink }}" title="RSS">
+    <a href="{{ $.LanguagePrefix }}{{ "/posts/index.xml" | relURL }}" title="RSS">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
