@@ -13,72 +13,72 @@ Ut dolor nunc, dictum vitae molestie pulvinar, condimentum quis dui. Mauris ulla
 
 Ã ¾ Ķ Ŀ Ƿ ע ऋ ਉ ጇ ᚙ ឿ ظ
 
----
-
 # This is H1
+
+Maecenas nec felis tortor. Etiam dictum felis eget augue congue finibus. Etiam nibh sapien, cursus sit amet feugiat non, posuere tincidunt dui.
+
 ## This is H2
+
+Maecenas nec felis tortor. Etiam dictum felis eget augue congue finibus. Etiam nibh sapien, cursus sit amet feugiat non, posuere tincidunt dui.
+
 ### This is H3
+
+Maecenas nec felis tortor. Etiam dictum felis eget augue congue finibus. Etiam nibh sapien, cursus sit amet feugiat non, posuere tincidunt dui.
+
 #### This is H4
+
+Maecenas nec felis tortor. Etiam dictum felis eget augue congue finibus. Etiam nibh sapien, cursus sit amet feugiat non, posuere tincidunt dui.
+
 ##### This is H5
+
+Maecenas nec felis tortor. Etiam dictum felis eget augue congue finibus. Etiam nibh sapien, cursus sit amet feugiat non, posuere tincidunt dui.
+
 ###### This is H6
+
+Maecenas nec felis tortor. Etiam dictum felis eget augue congue finibus. Etiam nibh sapien, cursus sit amet feugiat non, posuere tincidunt dui.
 
 ---
 
 Use the `printf()` function. You can use also ```print()```.
 
----
+*italics*
 
-*single asterisks*
-
-**double asterisks**
+**bold**
 
 ~~strikethrough text~~
 
 <u>underline</u>
 
----
-
 :heart_eyes:
 :boom:
 :smiling_imp:
 
----
-
 > Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac dolor elementum, consectetur tortor in, lacinia velit. Aenean dignissim tellus justo, sit amet suscipit tortor lacinia non.
-
----
 
 *   Red
 *   Green
 *   Blue
 
----
-
 1.  Red
 2. 	Green
 3.	Blue
 
----
-
-- [ ] a task list item
-- [ ] list syntax required
-- [ ] normal **formatting**, @mentions, #1234 refs
-- [ ] incomplete
-- [x] completed
-
----
+- [ ] Red
+- [ ] Green
+- [ ] **Blue**
+- [ ] Yellow
+- [x] Orange
 
 ```
 import os
 
-filename = os.environ.get('PYTHONSTARTUP')filename = os.environ.get('PYTHONSTARTUP')filename = os.environ.get('PYTHONSTARTUP')filename = os.environ.get('PYTHONSTARTUP')filename = os.environ.get('PYTHONSTARTUP')
+# Very long line, very long line, very long line, very long line, very long line, very long line, very long line, very long line.
+filename = os.environ.get('PYTHONSTARTUP')
 if filename and os.path.isfile(filename):
     with open(filename) as fobj:
         startup_file = fobj.read()
     exec(startup_file)
 ```
-
----
 
 ```python
 import os
@@ -89,8 +89,6 @@ if filename and os.path.isfile(filename):
         startup_file = fobj.read()
     exec(startup_file)
 ```
-
----
 
 {{< highlight html >}}
 <section id="main">
@@ -103,42 +101,48 @@ if filename and os.path.isfile(filename):
 </section>
 {{< /highlight >}}
 
----
-
 First Header | Second Header | Third Header
 ------------ | ------------- | ------------
 Content Cell | Content Cell  | Content Cell
 Content Cell | Content Cell  | Content Cell
-
----
 
 | First Header  | Second Header |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 
----
-
 First Header | Second Header | Third Header
 :----------- | :-----------: | -----------:
 Left         | Center        | Right
 Left         | Center        | Right
 
----
-
 You can create footnotes like this[^footnote].
 
 [^footnote]: Here is the *text* of the **footnote**.
 
----
-
-This is [an example](http://example.com/ "Title") inline link.
-
-[This link](http://example.net/) has no title attribute.
+This is [an example](http://example.com/ "Title") link.
 
 An email <example@example.com> link.
 
----
+![Alt text](/images/image-1.jpg "Photo by Ales Krivec on Unsplash")
+
+{{< figure src="/images/image-1.jpg" title="Photo by Ales Krivec on Unsplash" >}}
+
+{{< figure src="/images/image-1.jpg" title="Photo by Ales Krivec on Unsplash" lightbox="true" >}}
+
+{{< instagram BbTLbYSH59J >}}
+
+{{< instagram BahBaqvnv5N hidecaption >}}
+
+{{< speakerdeck 4e8126e72d853c0060001f97 >}}
+
+{{< tweet 877500564405444608 >}}
+
+{{< youtube wwKBHrMy-Wc >}}
+
+{{< vimeo 111271422 >}}
+
+{{< gist spf13 7896402 >}}
 
 # Table of Contents
   * [Chapter 1](#chapter-1)
@@ -153,49 +157,3 @@ Content for chapter one.
 
 ## Chapter 3 <a id="chapter-3"></a>
 Content for chapter one.
-
----
-
-This is [an example][id] reference-style link.
-
-Then, anywhere in the document, you define your link label like this, on a line by itself:
-
-[id]: http://example.com/  "Optional Title Here"
-
----
-
-![Alt text](/images/image-1.jpg)
-
-![Alt text](/images/image-1.jpg "Photo by Ales Krivec on Unsplash")
-
-{{< figure src="/images/image-1.jpg" title="Photo by Ales Krivec on Unsplash" >}}
-
-{{< figure src="/images/image-1.jpg" title="Photo by Ales Krivec on Unsplash" lightbox="true" >}}
-
----
-
-{{< instagram BbTLbYSH59J >}}
-
----
-
-{{< instagram BahBaqvnv5N hidecaption >}}
-
----
-
-{{< speakerdeck 4e8126e72d853c0060001f97 >}}
-
----
-
-{{< tweet 877500564405444608 >}}
-
----
-
-{{< youtube wwKBHrMy-Wc >}}
-
----
-
-{{< vimeo 111271422 >}}
-
----
-
-{{< gist spf13 7896402 >}}
