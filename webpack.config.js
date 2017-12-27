@@ -1,6 +1,7 @@
 const AssetsPlugin = require('assets-webpack-plugin')
 const autoprefixer = require('autoprefixer')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const path = require('path')
 const webpack = require('webpack')
@@ -12,8 +13,7 @@ const define = new webpack.DefinePlugin({
 })
 
 const extractCSS = new ExtractTextPlugin({
-  filename: getPath =>
-    getPath('css/[name].[contenthash:12].css').replace('css', '../css')
+  filename: getPath => getPath('css/[name].[contenthash:12].css')
 })
 
 const assetsManifest = new AssetsPlugin({
@@ -31,7 +31,13 @@ const assetsManifest = new AssetsPlugin({
   }
 })
 
+const copyImages = new CopyWebpackPlugin([{
+  from: 'src/images',
+  to: 'img'
+}])
+
 const cleanBuild = new CleanWebpackPlugin([
+  'static/assets/img/*',
   'static/assets/css/*',
   'static/assets/js/*'
 ])
@@ -41,8 +47,8 @@ const config = {
     main: path.join(__dirname, 'src/scripts', 'main.js')
   },
   output: {
-    filename: '[name].[chunkhash:12].js',
-    path: path.join(__dirname, 'static', 'assets', 'js')
+    filename: 'js/[name].[chunkhash:12].js',
+    path: path.join(__dirname, 'static', 'assets')
   },
   module: {
     rules: [
@@ -86,7 +92,12 @@ const config = {
   resolve: {
     extensions: ['*', '.js', '.scss']
   },
-  plugins: [define, extractCSS, assetsManifest]
+  plugins: [
+    define,
+    extractCSS,
+    assetsManifest,
+    copyImages
+  ]
 }
 
 if (process.env.NODE_ENV === 'production') config.plugins.push(cleanBuild)

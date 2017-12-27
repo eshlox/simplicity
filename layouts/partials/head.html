@@ -9,8 +9,8 @@
 <link rel="stylesheet" href='{{ print "/assets/css/" $.Site.Data.assets.main.css | relURL }}'>
 
 <!-- Icons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ print "/assets/img/favicon.png" | relURL }}">
+<link rel="shortcut icon" href="{{ print "/assets/img/favicon.ico" | relURL }}">
 
 <!-- RSS -->
 <link href="{{ $.LanguagePrefix }}{{ "/posts/index.xml" | relURL }}" rel="alternate" type="application/rss+xml" title="{{- .Site.Title -}}" />
