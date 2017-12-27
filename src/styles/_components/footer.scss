@@ -1,4 +1,10 @@
 footer {
+  display: grid;
+  height: 100%;
   padding: 0 $padding-left-right;
   text-align: right;
+
+  a {
+    align-self: center;
+  }
 }
