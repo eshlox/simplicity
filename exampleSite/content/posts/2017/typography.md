@@ -134,9 +134,9 @@ An email <example@example.com> link.
 
 {{< instagram BahBaqvnv5N hidecaption >}}
 
-{{< speakerdeck 4e8126e72d853c0060001f97 >}}
+{{< speakerdeck 50021f75cf1db900020005e7 >}}
 
-{{< tweet 877500564405444608 >}}
+{{< tweet 935115588166471680 >}}
 
 {{< youtube wwKBHrMy-Wc >}}
 
