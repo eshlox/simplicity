@@ -2,6 +2,16 @@ ul.post-list {
   padding: 0 $padding-left-right;
 
   a {
+    &:hover, &:active, &:visited {
+      text-decoration: none;
+    }
+
+    &:last-child {
+      li {
+        border-bottom: 1px solid $color-silver;
+      }
+    }
+
     li {
       border-top: 1px solid $color-silver;
       display: flex;
@@ -24,12 +34,6 @@ ul.post-list {
         @media (max-width: 40rem) {
           display: none;
         }
-      }
-    }
-
-    &:last-child {
-      li {
-        border-bottom: 1px solid $color-silver;
       }
     }
   }
