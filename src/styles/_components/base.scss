@@ -14,7 +14,7 @@ body {
   font-family: 'Roboto', sans-serif;
   grid-template-areas: "nav" "main" "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: $navbarHeight 1fr $footerHeigth;
+  grid-template-rows: $navbarHeight 1fr $footerHeight;
 }
 
 nav {
