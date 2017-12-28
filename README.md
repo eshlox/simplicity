@@ -99,11 +99,7 @@ You can also use lightbox plugin to display image in full-screen mode ([baguette
 
 ## Development
 
-This theme uses `webpack`. You can install all required libraries using [yarn](https://github.com/yarnpkg/yarn).
-
-```
-yarn install
-```
+This theme uses `webpack`. You can install all required libraries using [yarn](https://github.com/yarnpkg/yarn), just run `yarn install`.
 
 When you change SCSS or Javascript files, you can compile changes using `npm run build` command.
 
