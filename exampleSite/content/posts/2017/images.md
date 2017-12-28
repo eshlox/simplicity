@@ -8,7 +8,7 @@ slug: images
 images: [/images/image-1.jpg]
 ---
 
-Use markdown to diplay an image.
+Use markdown to display an image.
 
 ```markdown
 ![Alt text](/images/image-1.jpg "Photo by Ales Krivec on Unsplash")
