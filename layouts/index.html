@@ -19,7 +19,7 @@
         {{ $currentPage := . }}
         {{ range .Site.Menus.pages }}
           <li>
-            <a href="{{ .URL }}">
+            <a href="{{ .URL | relURL }}">
               {{ .Name }}
             </a>
           </li>

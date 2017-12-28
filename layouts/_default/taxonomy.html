@@ -2,7 +2,7 @@
   <div class="taxonomies-list">
     <h2>
       <span>{{ i18n "postsAbout" }}</span> {{ .Title }}
-      <a href="{{ .RSSLink }}" title="RSS">
+      <a href="{{ .RSSLink | relURL }}" title="RSS">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
