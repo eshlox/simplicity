@@ -15,6 +15,7 @@ title = "Simplicity - Hugo theme"
 [params]
   disqusShortname = "test"
   googleAnalytics = ""
+  creativeCommonsLicence = "by-sa/4.0" # format: "short-name/version", set false to disable
 [permalinks]
   posts = "/:year/:month/:day/:slug/"
 [pygmentsOptions]
