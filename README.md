@@ -77,7 +77,7 @@ Copy `config.toml` from `exampleSite` to the root directory of your Hugo site an
 
 ### favicons
 
-This theme contains default favicon with `S` letter. If you want to change it, create a directory `static/assets/img` inside the root of your Hugo site and put there your favicon files. They shoud have names: `favicon.ico` and `apple-touch-icon.png`.
+This theme contains default favicon with `S` letter. If you want to change it, create a directory `static/assets/img` inside the root of your Hugo site and put your favicon files there. They shoud have names: `favicon.ico` and `apple-touch-icon.png`.
 
 ## Shortcodes
 
@@ -119,7 +119,7 @@ Mobile:
 - Firefox (latest)
 - Chrome (latest)
 
-It probably works in other browsers but it's not tested yet.
+It probably works in other browsers but it hasn't been tested yet.
 
 ## Licence
 
