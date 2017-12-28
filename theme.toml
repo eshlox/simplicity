@@ -3,10 +3,10 @@ license     = "MIT"
 licenselink = "https://github.com/eshlox/simplicity/blob/master/LICENSE"
 description = "Simple theme with clean typography."
 homepage    = "https://github.com/eshlox/simplicity"
-tags        = ["minimal", "clean", "svg", "comments"]
-features    = ["blog", "responsive", "404", "disqus", "metadata"]
+tags        = ["blog", "responsive", "minimal"]
+features    = ["disqus", "lightbox"]
 min_version = "0.30.2"
 
 [author]
   name      = "Przemysław Kołodziejczyk"
-  homepage  = "https://github.com/eshlox"
+  homepage  = "https://eshlox.net"
