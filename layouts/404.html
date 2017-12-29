@@ -1,4 +1,4 @@
 {{ define "main" }}
-  <p>You're logged in as <strong>admin</strong>.</p>
-  <p>Just kidding. This page does not exist (404).</p>
+  <p>{{ i18n "loggedAs" . }} <strong>admin</strong>.</p>
+  <p>{{ i18n "404Page" . }}</p>
 {{ end }}

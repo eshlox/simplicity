@@ -18,3 +18,9 @@ other = "Kategorie"
 
 [tags]
 other = "Tagi"
+
+[loggedAs]
+other = "Jesteś zalogowany jako"
+
+[404Page]
+other = "Żartuję. Ta strona nie istnieje (404)."
