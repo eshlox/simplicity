@@ -13,6 +13,7 @@ title = "Simplicity - Hugo theme"
   homepageText = "Simplicity"
   name = "Przemysław `eshlox` Kołodziejczyk"
 [params]
+  description = "A blog about everything."
   disqusShortname = "test"
   googleAnalytics = ""
   creativeCommonsLicence = "by-sa/4.0" # format: "short-name/version", set false to disable
