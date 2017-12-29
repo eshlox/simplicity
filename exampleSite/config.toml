@@ -27,12 +27,12 @@ title = "Simplicity - Hugo theme"
   taxonomy = ["HTML", "RSS"]
   taxonomyTerm = ["HTML"]
 [[menu.pages]]
-  name = "My projects"
+  name = "Projects"
   weight = -100
-  identifier = "my-projects"
-  url = "/my-projects/"
+  identifier = "projects"
+  url = "/projects/"
 [[menu.pages]]
-  name = "My photos"
+  name = "Photos"
   weight = -90
-  identifier = "my-photos"
-  url = "/my-photos/"
+  identifier = "photos"
+  url = "/photos/"
