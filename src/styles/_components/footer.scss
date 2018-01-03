@@ -6,6 +6,7 @@ footer {
   padding: 0 $padding-left-right;
 
   @media (max-width: $mobileBreakpoint) {
+    grid-row-gap: 0.2rem;
     text-align: center;
   }
 
