@@ -19,7 +19,7 @@ ul.post-list {
       list-style: none;
       padding: 0.5rem 0;
 
-      @media (max-width: 40rem) {
+      @media (max-width: 50rem) {
         display: block;
         text-align: center;
       }
@@ -31,7 +31,7 @@ ul.post-list {
         margin-left: 2rem;
         white-space: nowrap;
 
-        @media (max-width: 40rem) {
+        @media (max-width: 50rem) {
           display: none;
         }
       }

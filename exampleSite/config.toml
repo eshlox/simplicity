@@ -16,7 +16,7 @@ title = "Simplicity - Hugo theme"
   description = "A blog about everything."
   disqusShortname = "test"
   googleAnalytics = ""
-  creativeCommonsLicence = "by-sa/4.0" # format: "short-name/version", set false to disable
+  licence = "[Some Rights Reserved](http://creativecommons.org/licenses/by-sa/4.0/)."
 [permalinks]
   posts = "/:year/:month/:day/:slug/"
 [pygmentsOptions]

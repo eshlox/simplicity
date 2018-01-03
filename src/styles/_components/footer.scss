@@ -1,10 +1,43 @@
 footer {
   display: grid;
+  font-size: $base-font-size * 0.75;
   height: 100%;
+  line-height: 1;
   padding: 0 $padding-left-right;
-  text-align: right;
 
-  a {
+  @media (max-width: 50rem) {
+    text-align: center;
+  }
+
+  div {
     align-self: center;
+
+    a {
+      vertical-align: middle;
+
+      &:hover, &:active, &:visited {
+        text-decoration: none;
+      }
+    }
+
+    &.powered-by {
+      grid-row-start: 2;
+
+      @media (min-width: 50rem) {
+        grid-column: 1;
+        grid-row-start: unset;
+        justify-self: start;
+      }
+    }
+  
+    &.copyright {
+      grid-row-start: 1;
+
+      @media (min-width: 50rem) {
+        grid-column: 2;
+        grid-row-start: unset;
+        justify-self: end;
+      }
+    }
   }
 }
