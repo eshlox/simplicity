@@ -17,6 +17,8 @@ title = "Simplicity - Hugo theme"
   disqusShortname = "test"
   googleAnalytics = ""
   licence = "[Some Rights Reserved](http://creativecommons.org/licenses/by-sa/4.0/)."
+  adsenseDataAdClient = ""
+  adsenseDataAdSlot = ""
 [permalinks]
   posts = "/:year/:month/:day/:slug/"
 [pygmentsOptions]
