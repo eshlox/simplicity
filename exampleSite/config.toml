@@ -19,6 +19,7 @@ title = "Simplicity - Hugo theme"
   licence = "[Some Rights Reserved](http://creativecommons.org/licenses/by-sa/4.0/)."
   adsenseDataAdClient = ""
   adsenseDataAdSlot = ""
+  addThisId = ""
 [permalinks]
   posts = "/:year/:month/:day/:slug/"
 [pygmentsOptions]
