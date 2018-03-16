@@ -6,5 +6,5 @@
   {{ else }}
     <img src="{{ .Get "src" | relURL }}" alt="{{ .Get "title" }}">
   {{ end }}
-  <figcaption>{{ .Get "title" }}</figcaption>
+  <figcaption>{{ .Get "caption" }}</figcaption>
 </figure>

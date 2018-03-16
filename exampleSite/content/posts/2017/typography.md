@@ -130,6 +130,8 @@ An email <example@example.com> link.
 
 {{< figure src="/images/image-1.jpg" title="Photo by Ales Krivec on Unsplash" lightbox="true" >}}
 
+{{< figure src="/images/image-1.jpg" title="Photo by Ales Krivec on Unsplash" lightbox="true" caption="Photo by Ales Krivec on Unsplash" >}}
+
 {{< instagram BbTLbYSH59J >}}
 
 {{< instagram BahBaqvnv5N hidecaption >}}

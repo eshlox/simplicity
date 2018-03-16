@@ -1,47 +1,13 @@
 <nav>
-  <div class="title">
-    {{ if not .IsHome }}
-      <a href="{{ $.LanguagePrefix }}{{ "/" | relURL }}" title="{{ i18n "homePage" }}">
-        {{ .Site.Author.homepagetext }}
-      </a>
-    {{ end }}
-  </div>
-  <div class="nav">
-    {{ if not .IsHome }}
-      <a href="{{ $.LanguagePrefix }}{{ "/" | relURL }}" title="{{ i18n "homePage" }}">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-          <polyline points="9 22 9 12 15 12 15 22" />
-        </svg>
-      </a>
-    {{ end }}
-    <a href="{{ $.LanguagePrefix }}{{ "/posts/index.xml" | relURL }}" title="RSS">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="rss"
-      >
-        <path d="M4 11a9 9 0 0 1 9 9" />
-        <path d="M4 4a16 16 0 0 1 16 16" />
-        <circle cx="5" cy="19" r="1" />
+  <a href="{{ $.LanguagePrefix }}{{ "/" | relURL }}" title="{{ i18n "homePage" }}">
+    {{ .Site.Author.homepagetext }}
+  </a>
+  {{ if not .IsHome }}
+    <a class="homePageIcon" href="{{ $.LanguagePrefix }}{{ "/" | relURL }}" title="{{ i18n "homePage" }}">
+      <svg fill="#000000" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
       </svg>
     </a>
-  </div>
+  {{ end }}
 </nav>

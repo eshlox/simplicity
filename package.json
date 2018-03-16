@@ -32,6 +32,7 @@
     "webpack": "3.8.1"
   },
   "dependencies": {
-    "baguettebox.js": "1.9.1"
+    "baguettebox.js": "1.9.1",
+    "headroom.js": "^0.9.4"
   }
 }

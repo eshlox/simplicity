@@ -1,15 +1,13 @@
 {{ define "main" }}
-  <div class="taxonomies">
-    <h1>{{ i18n (lower .Data.Plural) . }}</h1>
-    <ul>
-      {{ range .Data.Terms.Alphabetical }}
-        <li>
-          <a href="{{ $.LanguagePrefix }}/{{ $.Data.Plural }}/{{ .Term | urlize }}">
-            {{ if eq $.Data.Plural "tags" }}<span class="hash">#</span>{{ end }}{{ .Term }}
-          </a>
-          <sup>{{ .Count }}</sup>
-        </li>
-      {{ end }}
-    </ul>
-  </div>
+  <h1>{{ i18n (lower .Data.Plural) . }}</h1>
+  <ul>
+    {{ range .Data.Terms.Alphabetical }}
+      <li>
+        <a href="{{ $.LanguagePrefix }}/{{ $.Data.Plural }}/{{ .Term | urlize }}">
+          {{ .Term }}
+        </a>
+        <sup>{{ .Count }}</sup>
+      </li>
+    {{ end }}
+  </ul>
 {{ end }}

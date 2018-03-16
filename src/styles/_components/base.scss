@@ -1,33 +1,309 @@
+$breakpoint: 800px;
+
+$base-font-size: 18px;
+$base-line-height: 1.5;
+$base-background-color: #fefefe;
+$base-font-color: #454545;
+
+$navbar-height: 3rem;
+$navbar-background-color: #f8f8f8; // #39f;
+$navbar-icon-color: #000;
+$navbar-text-color: #000;
+
+$links-color: #39f;
+
+$color-white-smoke: #f8f8f8;
+$color-indian-red: #f0506e;
+$color-silver: #c0c0c0;
+$color-dark-slate-gray: #202020;
+$color-light-gray: #d0d0d0;
+
+$itemMargin: 2rem;
+
 html, body {
+  background-color: $base-background-color;
+  color: $base-font-color;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
   font-size: $base-font-size;
-  height: 100%;
-  height: 100vh;  // To make sure it takes 100% height on Safari
   line-height: $base-line-height;
-  margin: 0;
-  padding: 0;
-  width: 100%;
 }
 
 body {
-  background-color: $color-white;
-  display: grid;
-  font-family: 'Roboto', sans-serif;
-  grid-template-areas: "nav" "main" "footer";
-  grid-template-columns: 1fr;
-  grid-template-rows: $navbarHeight 1fr $footerHeight;
-}
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
-nav {
-  align-self: center;
-  grid-area: nav;
-}
+  a {
+    color: $links-color;
+    text-decoration: none;
 
-main {
-  // align-self: center;
-  grid-area: main;
-}
+    &:hover, &:active, &:visited {
+      text-decoration: underline;
+    }
+  }
 
-footer {
-  align-self: center;
-  grid-area: footer;
+  hr {
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    height: 0;
+  }
+
+  nav {
+    align-items: center;
+    background-color: $navbar-background-color;
+    color: $navbar-text-color;
+    display: flex;
+    height: $navbar-height;
+    justify-content: space-between;
+    padding: 0.1rem 1rem;
+
+    a {
+      color: $navbar-text-color;
+      text-decoration: none;
+
+      &:hover, &:active, &:visited {
+        text-decoration: none;
+      }
+    }
+
+    a.homePageIcon {
+      height: 1.5rem;
+      width: 1.5rem;
+
+      svg {
+        fill: $navbar-icon-color;
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+  }
+
+  main {
+    box-sizing: border-box;
+    flex: 1;
+    margin: 1rem auto;
+    max-width: 900px;
+    padding: 0 1rem;
+    width: 100%;
+
+    .homepage-avatar {
+      border-radius: 50%;
+    }
+
+    .addthis_toolbox {
+      margin: 2rem 0;
+    }
+
+    .svg-icon {
+      align-self: center;
+      display: inline-flex;
+
+      svg {
+        fill: $color-silver;
+        height: 1rem;
+        width: 1rem;
+      }
+
+      &.baseline {
+        position: relative;
+        top: -0.1rem;
+      }
+    }
+
+    ol.grey-labels {
+      list-style: none;
+      counter-reset: li;
+
+      li {
+        counter-increment: li;
+
+        &::before {
+          content: counter(li, decimal-leading-zero);
+          color: #ccc; // TODO: check those styles for ol li
+          display: inline-block;
+          width: 1em;
+          margin-left: -1.5em;
+          //margin-right: 0.5em;
+          text-align: right;
+          direction: rtl
+        }
+      }
+    }
+
+    article, .page-content {
+      header {
+        text-align: center;
+
+        time {
+          color: $color-silver;
+        }
+
+        h1 {
+          margin: 0;
+        }
+      }
+
+      .adsense {
+        margin: 3rem auto;
+      }
+
+      section {
+        text-align: justify;
+
+        blockquote {
+          border-left: 0.5rem $color-silver solid;
+          font-style: italic;
+          margin: $itemMargin auto;
+          width: 60%;
+          padding: 1rem;
+        }
+
+        img {
+          box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.75); // TODO: settings?
+          display: block;
+          height: auto;
+          margin: 4rem auto;
+          max-width: 100%;
+        }
+
+        figure {
+          margin: 4rem auto;
+          padding: 0;
+          position: relative;
+
+          img {
+            margin: 0 auto;
+          }
+
+          figcaption {
+            //bottom: 0;
+            //box-sizing: border-box;
+            //color: #fff;
+            //background: #000;
+            //left: 0;
+            //opacity: 0.7;
+            font-weight: bold;
+            padding: 0.7rem;
+            //position: absolute;
+            text-align: center;
+            //width: 100%;
+          }
+        }
+
+        p {
+          margin-bottom: 2rem;
+
+          code {
+            background-color: $color-white-smoke;
+            color: $color-indian-red;
+            padding: 0.2rem 0.3rem;
+          }
+
+          img {
+            margin: 3rem auto;
+          }
+        }
+
+        pre {
+          margin: $itemMargin auto;
+          background-color: $color-dark-slate-gray;
+          color: $color-light-gray;
+          display: grid;
+          overflow: auto;
+          padding: 1rem;
+
+          code {
+            color: $color-light-gray;
+            background-color: $color-dark-slate-gray;
+            font-size: $base-font-size * 0.8;
+            min-width: 0;
+            //width: 50vw; // FIXME: Ugly hack for Firefox? The code tag is widther that window.
+          }
+        }
+
+        table:not(.highlight) {  // disable for table inside Github gist
+          border-collapse: collapse;
+          border-style: hidden;
+          margin-bottom: $itemMargin;
+          margin-top: $itemMargin;
+          width: 100%;
+
+          thead {
+            tr {
+              th {
+                border: 1px solid $color-silver;
+                font-weight: bold;
+                padding: 0.5rem;
+                text-align: left;
+                vertical-align: middle;
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              td {
+                border: 1px solid $color-silver;
+                padding: 0.5rem;
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+
+      footer {
+        text-align: center;
+
+        .meta {
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+          padding: 0.1rem 1rem;
+
+          @media screen and (max-width: $breakpoint) {
+            flex-direction: column;
+          }
+
+          .categories {
+            a {
+              background-color: $links-color;
+              border-radius: 0.2rem;
+              color: $color-white-smoke;
+              padding: 0.2rem 0.5rem;
+            }
+          }
+
+          .tags {
+            a {
+              span {
+                color: $color-silver;
+              }
+            }
+          }
+        }
+
+        .addthis_inline_share_toolbox,
+        .disqus_thread {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+
+  > footer {
+    align-items: center;
+    background-color: $navbar-background-color;
+    color: $navbar-text-color;
+    display: flex;
+    font-size: $base-font-size * 0.8;
+    justify-content: space-between;
+    padding: 0.1rem 1rem;
+    text-align: center;
+
+    @media screen and (max-width: $breakpoint) {
+      flex-direction: column;
+    }
+  }
 }

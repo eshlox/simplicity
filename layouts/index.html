@@ -1,30 +1,24 @@
 {{ define "main" }}
-  <div class="homepage">
-    <img class="avatar" src="https://www.gravatar.com/avatar/{{ md5 .Site.Author.gravataremail }}?s=100&d=identicon">
-    {{ .Content }}
+  <img
+    class="homepage-avatar"
+    src="https://www.gravatar.com/avatar/{{ md5 .Site.Author.gravataremail }}?s=100&d=identicon"
+  >
+  {{ .Content }}
+  {{ if .Site.Menus.pages }}
     <hr>
+    <h1>{{ i18n "pages" . }}</h1>
     <ul>
-      <li>
-        <a href="/posts/">{{ i18n "postsList" . }}</a></li>
-      <li>
-        <a href="/categories/">{{ i18n "categories" . }}</a>
-      </li>
-      <li>
-        <a href="/tags/">{{ i18n "tags" . }}</a>
-      </li>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.pages }}
+        <li>
+          <a href="{{ .URL | relURL }}">
+            {{ .Name }}
+          </a>
+        </li>
+      {{ end }}
     </ul>
-    {{ if .Site.Menus.pages }}
-      <hr>
-      <ul>
-        {{ $currentPage := . }}
-        {{ range .Site.Menus.pages }}
-          <li>
-            <a href="{{ .URL | relURL }}">
-              {{ .Name }}
-            </a>
-          </li>
-        {{ end }}
-      </ul>
-    {{ end }}
-  </div>
+  {{ end }}
+  <hr>
+  <h1>{{ i18n "postsList" . }}</h1>
+  {{ partial "posts_list.html" . }}
 {{ end }}
