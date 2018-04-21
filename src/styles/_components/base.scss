@@ -1,4 +1,5 @@
 $breakpoint: 800px;
+$addthisBreakpoint: 1100px;
 
 $base-font-size: 18px;
 $base-line-height: 1.5;
@@ -111,6 +112,71 @@ body {
       }
     }
 
+    ul.post-list {
+      padding: 0;
+
+      a {
+        &:hover, &:active, &:visited {
+          text-decoration: none;
+        }
+
+        &:last-child {
+          li {
+            border-bottom: 1px solid $color-silver;
+          }
+        }
+
+        li {
+          border-top: 1px solid $color-silver;
+          display: flex;
+          justify-content: space-between;
+          list-style: none;
+          padding: 0.5rem 0;
+
+          @media (max-width: $breakpoint) {
+            display: block;
+            text-align: center;
+          }
+
+          .date {
+            color: $color-silver;
+            font-style: italic;
+            font-weight: normal;
+            margin-left: 2rem;
+            white-space: nowrap;
+
+            @media (max-width: $breakpoint) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    ul.pagination {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+      padding: 0;
+
+      li {
+        display: inline;
+        list-style: none;
+
+        a {
+          height: 2.5rem;
+          width: 2.5rem;
+
+          svg {
+            fill: $navbar-icon-color;
+            height: 2.5rem;
+            width: 2.5rem;
+          }
+        }
+      }
+    }
+
     ol.grey-labels {
       list-style: none;
       counter-reset: li;
@@ -144,12 +210,14 @@ body {
         }
       }
 
-      .adsense {
-        margin: 3rem auto;
-      }
-
       section {
+        margin-top: 2rem;
         text-align: justify;
+
+        ins.adsbygoogle {
+          margin-bottom: $itemMargin;
+          margin-top: $itemMargin;
+        }
 
         blockquote {
           border-left: 0.5rem $color-silver solid;
@@ -254,13 +322,14 @@ body {
       }
 
       footer {
+        margin: 4rem 0 3rem 0;
         text-align: center;
 
         .meta {
           align-items: center;
           display: flex;
           justify-content: space-between;
-          padding: 0.1rem 1rem;
+          //padding: 0.1rem 1rem;
 
           @media screen and (max-width: $breakpoint) {
             flex-direction: column;
@@ -285,8 +354,8 @@ body {
         }
 
         .addthis_inline_share_toolbox,
-        .disqus_thread {
-          margin: 1rem 0;
+        #disqus_thread {
+          margin: 3rem 0;
         }
       }
     }
@@ -304,6 +373,10 @@ body {
 
     @media screen and (max-width: $breakpoint) {
       flex-direction: column;
+    }
+
+    @media (max-width: $addthisBreakpoint) {
+      padding-bottom: 40px;
     }
   }
 }

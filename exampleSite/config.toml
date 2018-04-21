@@ -1,6 +1,7 @@
 baseURL = "https://example.org/"
 defaultContentLanguage = "en"
 enableEmoji = true
+googleAnalytics = ""
 languageCode = "en-us"
 paginate = 4
 pygmentsCodeFences = true
@@ -15,11 +16,11 @@ title = "Simplicity - Hugo theme"
 [params]
   description = "A blog about everything."
   disqusShortname = "test"
-  googleAnalytics = ""
   licence = "[Some Rights Reserved](http://creativecommons.org/licenses/by-sa/4.0/)."
   adsenseDataAdClient = ""
   adsenseDataAdSlot = ""
   addThisId = ""
+  pagination = false
 [permalinks]
   posts = "/:year/:month/:day/:slug/"
 [pygmentsOptions]

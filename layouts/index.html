@@ -4,11 +4,23 @@
     src="https://www.gravatar.com/avatar/{{ md5 .Site.Author.gravataremail }}?s=100&d=identicon"
   >
   {{ .Content }}
+  <hr>
+  <h2>Blog</h2>
+  <ul>
+    <li>
+      <a href="/posts/">{{ i18n "postsList" . }}</a></li>
+    <li>
+      <a href="/categories/">{{ i18n "categories" . }}</a>
+    </li>
+    <li>
+      <a href="/tags/">{{ i18n "tags" . }}</a>
+    </li>
+  </ul>
   {{ if .Site.Menus.pages }}
     <hr>
-    <h1>{{ i18n "pages" . }}</h1>
+    <h2>{{ i18n "pages" . }}</h2>
     <ul>
-      {{ $currentPage := . }}
+      <!--{{ $currentPage := . }}-->
       {{ range .Site.Menus.pages }}
         <li>
           <a href="{{ .URL | relURL }}">
@@ -18,7 +30,4 @@
       {{ end }}
     </ul>
   {{ end }}
-  <hr>
-  <h1>{{ i18n "postsList" . }}</h1>
-  {{ partial "posts_list.html" . }}
 {{ end }}

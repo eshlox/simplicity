@@ -42,4 +42,4 @@ Example code:
 
 Result (click on the image):
 
-{{< figure src="/images/image-1.jpg" title="Photo by Ales Krivec on Unsplash" lightbox="true" >}}
+{{< figure src="/images/image-1.jpg" title="Photo by Ales Krivec on Unsplash" lightbox="true" options="300x" command="Fit" >}}
