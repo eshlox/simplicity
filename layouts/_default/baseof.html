@@ -11,8 +11,5 @@
     {{ partial "footer.html" . }}
     <script src="{{ print "/assets/js/" $.Site.Data.assets.main.js | relURL }}"></script>
     {{ template "_internal/google_analytics_async.html" . }}
-    {{ if .Site.Params.addThisId }}
-      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ $.Site.Params.addThisId }}"></script>
-    {{ end }}
   </body>
 </html>

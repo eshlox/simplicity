@@ -1,23 +1,16 @@
 @import "~node-normalize-scss/normalize";
 
-//@import "settings";
+@import "settings";
 
-//@import "mixins";
-
-//@import "_components/adsense";
 @import "_components/base";
-//@import "_components/content";
-//@import "_components/footer";
-//@import "_components/homepage";
-//@import "_components/links";
-//@import "_components/navbar";
-//@import "_components/page";
-//@import "_components/pagination";
-//@import "_components/post";
-//@import "_components/posts_list";
-//@import "_components/taxonomies";
-//@import "_components/taxonomies_list";
-//@import "_components/typography";
+@import "_components/content";
+@import "_components/elements";
+@import "_components/footer";
+@import "_components/homepage";
+@import "_components/navbar";
+@import "_components/posts_list";
+@import "_components/progress_bar";
+@import "_components/taxonomies";
 
 @import "chroma_native";
 

@@ -11,7 +11,6 @@ Very simple, clean and readable (I think so) Hugo theme.
 - Schema Structured Data
 - Twitter card
 - Creative commons licence icon in footer (optional)
-- HTML5 grid
 - No JS frameworks, no CSS frameworks, no jQuery
 
 # Demo

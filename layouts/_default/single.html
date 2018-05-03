@@ -1,4 +1,7 @@
 {{ define "main" }}
+  <div class="progress-container">
+    <div class="progress-bar"></div>
+  </div>
   <article>
     <header>
       <time datetime="{{ .Date.Format "2006-01-02 03:04" }}">
@@ -7,7 +10,6 @@
       <h1>{{- .Title -}}</h1>
     </header>
     <section>
-      {{ partial "adsense.html" . }}
       {{- .Content -}}
     </section>
     <footer>
@@ -32,10 +34,6 @@
           {{ end }}
         </p>
       </div>
-      <!--{{ if .Site.Params.addThisId }}-->
-        <!--<hr>-->
-        <!--<div class="addthis_inline_share_toolbox"></div>-->
-      <!--{{ end }}-->
       <hr>
       {{ template "_internal/disqus.html" . }}
     </footer>

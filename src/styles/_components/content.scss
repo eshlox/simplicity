@@ -1,8 +1,279 @@
-//main {
-//  justify-self: center;
-//  margin-bottom: 1rem;
-//  margin-top: 1rem;
-//  max-width: $page-max-width;
-//  min-width: 0;
-//  width: 100%;
-//}
+body {
+  main {
+    article {
+      header {
+        margin-bottom: 3rem;
+        text-align: center;
+
+        h1 {
+          font-size: 2.5rem;
+          margin-top: 0;
+        }
+
+        time {
+          font-size: 0.8rem;
+          color: $color-silver;
+        }
+      }
+
+      section {
+        text-align: justify;
+
+        blockquote {
+          border-left: 0.3rem $color-silver solid;
+          font-style: italic;
+          margin: $itemMargin auto;
+          width: 60%;
+          padding: 1rem;
+        }
+
+        figure {
+          margin: $itemMargin*2 auto;
+          padding: 0;
+          position: relative;
+
+          &.full {
+            left: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            position: relative;
+            right: 50%;
+            width: 100vw;
+          }
+
+          img {
+            margin: 0 auto;
+
+            &.full {
+              left: 50%;
+              margin-left: -50vw;
+              margin-right: -50vw;
+              position: relative;
+              right: 50%;
+              width: 100vw;
+            }
+          }
+
+          figcaption {
+            //bottom: 0;
+            //box-sizing: border-box;
+            //color: #fff;
+            //background: #000;
+            //left: 0;
+            //opacity: 0.7;
+            font-weight: bold;
+            //padding: 0.7rem;
+            //position: absolute;
+            text-align: center;
+            //width: 100%;
+          }
+        }
+
+        h1 {
+          font-size: 2.5rem;
+          margin: $itemMargin*1.5 0 $itemMargin 0;
+        }
+
+        h2 {
+          font-size: 2rem;
+          //margin: $itemMargin 0 $itemMargin/2 0;
+          margin: $itemMargin*1.4 0 $itemMargin*0.9 0;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          margin: $itemMargin*1.3 0 $itemMargin*0.8 0;
+          //margin: $itemMargin 0 $itemMargin/2 0;
+        }
+
+        h4 {
+          font-size: 1rem;
+          margin: $itemMargin*1.2 0 $itemMargin*0.7 0;
+          //margin: $itemMargin 0 $itemMargin/2 0;
+        }
+
+        h5 {
+          font-size: 0.8rem;
+          margin: $itemMargin*1.1 0 $itemMargin*0.6 0;
+          //margin: $itemMargin 0 $itemMargin/2 0;
+        }
+
+        h6 {
+          font-size: 0.6rem;
+          margin: $itemMargin 0 $itemMargin*0.5 0;
+          //margin: $itemMargin 0 $itemMargin/2 0;
+        }
+
+        iframe.instagram-media {
+          margin: $itemMargin auto !important;
+        }
+
+        img {
+          box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.75); // TODO: settings?
+          display: block;
+          height: auto;
+          margin: $itemMargin auto;
+          //margin: 4rem auto;
+          max-width: 100%;
+
+            &.full {
+              left: 50%;
+              margin-left: -50vw;
+              margin-right: -50vw;
+              position: relative;
+              right: 50%;
+              width: 100vw;
+            }
+        }
+
+        //video {
+        //  display: block;
+        //  margin: 4rem auto;
+        //}
+
+        //.youtube {
+        //  border: 0;
+        //  top: 0;
+        //  left: 0;
+        //  width: 100%;
+        //  height: 100%;
+        //  position: absolute;
+        //
+        //  iframe {
+        //    border: 0;
+        //    top: 0;
+        //    left: 0;
+        //    width: 100%;
+        //    height: 100%;
+        //    position: absolute;
+        //  }
+        //
+        //}
+
+        ol {
+          margin: $itemMargin 0;
+          padding: 0 0 0 20px;
+        }
+
+        p {
+          margin-bottom: $itemMargin;
+
+          code {
+            background-color: $color-white-smoke;
+            color: $color-indian-red;
+            padding: 0.2rem 0.3rem;
+          }
+
+          img {
+            //margin: 3rem auto;
+          }
+        }
+
+        pre {
+          margin: $itemMargin auto;
+          background-color: $color-dark-slate-gray;
+          color: $color-light-gray;
+          display: grid;
+          overflow: auto;
+          padding: 0.5rem;
+
+          code {
+            color: $color-light-gray;
+            background-color: $color-dark-slate-gray;
+            font-size: $base-font-size * 0.8;
+            min-width: 0;
+            //width: 50vw; // FIXME: Ugly hack for Firefox? The code tag is widther that window.
+          }
+        }
+
+        table:not(.highlight) {  // disable for table inside Github gist
+          border-collapse: collapse;
+          border-style: hidden;
+          margin: $itemMargin 0;
+          width: 100%;
+
+          thead {
+            tr {
+              th {
+                border: 1px solid $color-silver;
+                font-weight: bold;
+                padding: 0.5rem;
+                text-align: left;
+                vertical-align: middle;
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              td {
+                border: 1px solid $color-silver;
+                padding: 0.5rem;
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+
+        ul {
+          margin: $itemMargin 0;
+          padding: 0 0 0 20px;
+
+          &.task-list {
+            list-style: none;
+            padding: 0;
+          }
+        }
+
+        .gist {
+          margin: $itemMargin 0;
+        }
+
+        .twitter-tweet {
+          margin: $itemMargin auto !important;
+
+          @media (max-width: 550px) {
+            width: 0 !important;
+          }
+        }
+      }
+
+      footer {
+        margin: $itemMargin 0;
+        text-align: center;
+
+        .meta {
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+          padding: 0.1rem 1rem;
+
+          @media screen and (max-width: $breakpoint) {
+            flex-direction: column;
+          }
+
+          .categories {
+            a {
+              background-color: $links-color;
+              border-radius: 0.2rem;
+              color: $color-white-smoke;
+              padding: 0.2rem 0.5rem;
+            }
+          }
+
+          .tags {
+            a {
+              span {
+                color: $color-silver;
+              }
+            }
+          }
+        }
+
+        #disqus_thread {
+          margin: $itemMargin 0;
+        }
+      }
+    }
+  }
+}

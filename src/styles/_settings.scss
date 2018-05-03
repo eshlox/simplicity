@@ -1,23 +1,21 @@
-// General
-$base-font-size: 20px;
+$breakpoint: 800px;
+
+$base-font-size: 18px;
 $base-line-height: 1.5;
-$footerHeight: 2rem;
-$itemMargin: 2rem;
-$navbarHeight: 2rem;
-$mobileBreakpoint: 50rem;
-$padding-left-right: 1rem;
-$page-max-width: 60rem;
+$base-background-color: #fefefe;
+$base-font-color: #454545;
 
-// Colors
-$color-black: #000;
-$color-dark-slate-gray: #202020;
-$color-dodger-blue: #1e90ff;
-$color-indian-red: #f0506e;
-$color-light-gray: #d0d0d0;
-$color-rss: #f26522;
-$color-silver: #c0c0c0;
-$color-white: #fff;
+$navbar-height: 3rem;
+$navbar-background-color: #f8f8f8;
+$navbar-icon-color: #000;
+$navbar-text-color: #000;
+
+$links-color: #39f;
+
 $color-white-smoke: #f8f8f8;
+$color-indian-red: #f0506e;
+$color-silver: #c0c0c0;
+$color-dark-slate-gray: #202020;
+$color-light-gray: #d0d0d0;
 
-$hr-botder-bottom-color: rgba(255, 255, 255, 0.3);
-$hr-border-top-color: rgba(0, 0, 0, 0.1);
+$itemMargin: 2rem;
