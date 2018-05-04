@@ -1,13 +1,28 @@
 baseURL = "https://example.org/"
 defaultContentLanguage = "en"
 enableEmoji = true
-googleAnalytics = ""
 languageCode = "en-us"
 pygmentsCodeFences = true
 pygmentsStyle = "native"
 pygmentsUseClasses =  true
 theme = "simplicity"
 title = "Simplicity - Hugo theme"
+googleAnalytics = ""
+enableRobotsTXT = true
+[permalinks]
+  posts = "/:year/:month/:day/:slug/"
+[pygmentsOptions]
+  linenos = false
+[imaging]
+  resampleFilter = "box"
+  quality = 75
+  anchor = "smart"
+[outputs]
+  home = ["HTML"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]
 [author]
   gravatarEmail = "test@example.com"
   homepageText = "Simplicity"
@@ -27,16 +42,6 @@ title = "Simplicity - Hugo theme"
   description = "A blog about everything."
   disqusShortname = "test"
   licence = "[Some Rights Reserved](http://creativecommons.org/licenses/by-sa/4.0/)."
-[permalinks]
-  posts = "/:year/:month/:day/:slug/"
-[pygmentsOptions]
-  linenos = false
-[outputs]
-  home = ["HTML"]
-  page = ["HTML"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML"]
 [[menu.pages]]
   name = "Projects"
   weight = -100
