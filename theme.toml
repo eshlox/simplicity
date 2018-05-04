@@ -5,7 +5,7 @@ description = "Simple theme with clean typography."
 homepage    = "https://github.com/eshlox/simplicity"
 tags        = ["blog", "responsive", "minimal"]
 features    = ["disqus", "lightbox"]
-min_version = "0.30.2"
+min_version = "0.38"
 
 [author]
   name      = "Przemysław Kołodziejczyk"
