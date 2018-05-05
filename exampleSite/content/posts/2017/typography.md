@@ -11,14 +11,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit :wink:. Nullam nibh lore
 
 Ut dolor nunc, dictum vitae molestie pulvinar, condimentum quis dui. Mauris ullamcorper tincidunt magna, quis tristique ligula laoreet fringilla. Nam dapibus tellus vel est vehicula, sed mattis sapien tempus. Aenean suscipit erat in lacus luctus lacinia. Donec in justo arcu. Nunc nibh lorem, ultricies in nunc ac, posuere feugiat ligula. In convallis, urna dapibus vehicula gravida, justo massa aliquam nunc, vitae gravida justo metus non felis. Mauris sed augue risus. Quisque commodo quam in risus porttitor ultrices. Fusce pellentesque eget eros vitae pulvinar. Maecenas nec felis tortor. Etiam dictum felis eget augue congue finibus. Etiam nibh sapien, cursus sit amet feugiat non, posuere tincidunt dui.
 
+Ã ¾ Ķ Ŀ Ƿ ע ऋ ਉ ጇ ᚙ ឿ ظ
+
 # H1
 ## H2
 ### H3
 #### H4
 ##### H5
 ###### H6
-
-Ã ¾ Ķ Ŀ Ƿ ע ऋ ਉ ጇ ᚙ ឿ ظ
 
 # This is H1
 
@@ -150,6 +150,8 @@ An email <example@example.com> link.
 {{< youtube wwKBHrMy-Wc >}}
 
 {{< vimeo 111271422 >}}
+
+{{< video src="media/video.mp4" >}}
 
 {{< gist spf13 7896402 >}}
 
