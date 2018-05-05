@@ -42,6 +42,18 @@
       {{ $.Scratch.Set "resize_1280" ($original) }}
     {{ end }}
 
+    {{ if gt ($original.Width) 1600 }}
+      {{ $.Scratch.Set "resize_1600" ($original.Resize "1600x") }}
+    {{ else }}
+      {{ $.Scratch.Set "resize_1600" ($original) }}
+    {{ end }}
+
+    {{ if gt ($original.Width) 1920 }}
+      {{ $.Scratch.Set "resize_1920" ($original.Resize "1920x") }}
+    {{ else }}
+      {{ $.Scratch.Set "resize_1920" ($original) }}
+    {{ end }}
+
     <figure{{ if eq $full "true" }} class="full"{{ end }}>
       {{ if eq $lightbox "true" }}
         <a href="{{ $original.RelPermalink | relURL }}"{{ if $title }} title="{{ $title }}"{{ end }}>
@@ -54,6 +66,8 @@
               {{ ($.Scratch.Get "resize_768").RelPermalink }} 768w,
               {{ ($.Scratch.Get "resize_1024").RelPermalink }} 1024w,
               {{ ($.Scratch.Get "resize_1280").RelPermalink }} 1280w
+              {{ ($.Scratch.Get "resize_1600").RelPermalink }} 1600w
+              {{ ($.Scratch.Get "resize_1920").RelPermalink }} 1920w
             "
             {{ if ($title) }}alt="{{ $title }}"{{ end }}
           >
@@ -68,6 +82,8 @@
             {{ ($.Scratch.Get "resize_768").RelPermalink }} 768w,
             {{ ($.Scratch.Get "resize_1024").RelPermalink }} 1024w,
             {{ ($.Scratch.Get "resize_1280").RelPermalink }} 1280w
+            {{ ($.Scratch.Get "resize_1600").RelPermalink }} 1600w
+            {{ ($.Scratch.Get "resize_1920").RelPermalink }} 1920w
           "
           {{ if $title }}alt="{{ $title }}"{{ end }}
         >
@@ -80,6 +96,8 @@
     {{ $.Scratch.Delete "resize_768" }}
     {{ $.Scratch.Delete "resize_1024" }}
     {{ $.Scratch.Delete "resize_1280" }}
+    {{ $.Scratch.Delete "resize_1600" }}
+    {{ $.Scratch.Delete "resize_1920" }}
   {{ else }}
     <figure{{ if eq $full "true" }} class="full"{{ end }}>
       {{ if eq $lightbox "true" }}
