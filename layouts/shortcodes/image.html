@@ -46,9 +46,9 @@
       {{ if eq $lightbox "true" }}
         <a href="{{ $original.RelPermalink | relURL }}"{{ if $title }} title="{{ $title }}"{{ end }}>
           <img
-            src="{{ $original.RelPermalink }}"
+            data-src="{{ $original.RelPermalink }}"
             {{ if eq $full "true" }} class="full"{{ end }}
-            srcset="
+            data-srcset="
               {{ ($.Scratch.Get "resize_320").RelPermalink }} 320w,
               {{ ($.Scratch.Get "resize_480").RelPermalink }} 480w,
               {{ ($.Scratch.Get "resize_768").RelPermalink }} 768w,
@@ -61,8 +61,8 @@
       {{ else }}
         <img
           {{ if eq $full "true" }}class="full"{{ end }}
-          src="{{ $original.RelPermalink }}"
-          srcset="
+          data-src="{{ $original.RelPermalink }}"
+          data-srcset="
             {{ ($.Scratch.Get "resize_320").RelPermalink }} 320w,
             {{ ($.Scratch.Get "resize_480").RelPermalink }} 480w,
             {{ ($.Scratch.Get "resize_768").RelPermalink }} 768w,
@@ -85,7 +85,7 @@
       {{ if eq $lightbox "true" }}
         <a href="{{ $original.RelPermalink | relURL }}"{{ if $title }} title="{{ $title }}"{{ end }}>
           <img
-            src="{{ $original.RelPermalink }}"
+            data-src="{{ $original.RelPermalink }}"
             {{ if eq $full "true" }} class="full"{{ end }}
             {{ if ($title) }}alt="{{ $title }}"{{ end }}
           >
@@ -93,7 +93,7 @@
       {{ else }}
         <img
           {{ if eq $full "true" }}class="full"{{ end }}
-          src="{{ $original.RelPermalink }}"
+          data-src="{{ $original.RelPermalink }}"
           {{ if $title }}alt="{{ $title }}"{{ end }}
         >
       {{ end }}
