@@ -1,47 +1,34 @@
 baseURL = "https://example.org/"
 defaultContentLanguage = "en"
+disqusShortname = "test"
 enableEmoji = true
+enableRobotsTXT = true
+googleAnalytics = ""
 languageCode = "en-us"
 pygmentsCodeFences = true
 pygmentsStyle = "native"
 pygmentsUseClasses =  true
 theme = "simplicity"
 title = "Simplicity - Hugo theme"
-googleAnalytics = ""
-enableRobotsTXT = true
-[permalinks]
-  posts = "/:year/:month/:day/:slug/"
-[pygmentsOptions]
-  linenos = false
-[imaging]
-  resampleFilter = "box"
-  quality = 75
-  anchor = "smart"
-[outputs]
-  home = ["HTML"]
-  page = ["HTML"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML"]
 [author]
+  email = "#"
+  facebook = "#"
+  github = "#"
+  google_plus = "#"
   gravatarEmail = "test@example.com"
   homepageText = "Simplicity"
-  name = "Przemysław `eshlox` Kołodziejczyk"
-  telegram = "#"
-  twitter = "#"
-  github = "#"
-  stackoverflow = "#"
-  spotify = "#"
-  google_plus = "#"
   linkedin = "#"
   messenger = "#"
-  facebook = "#"
+  name = "Przemysław `eshlox` Kołodziejczyk"
   rss = "/posts/index.xml"
-  email = "#"
-[params]
-  description = "A blog about everything."
-  disqusShortname = "test"
-  licence = "[Some Rights Reserved](http://creativecommons.org/licenses/by-sa/4.0/)."
+  spotify = "#"
+  stackoverflow = "#"
+  telegram = "#"
+  twitter = "#"
+[imaging]
+  anchor = "smart"
+  resampleFilter = "box"
+  quality = 75
 [[menu.pages]]
   name = "Projects"
   weight = -100
@@ -52,3 +39,18 @@ enableRobotsTXT = true
   weight = -90
   identifier = "photos"
   url = "/photos/"
+[outputs]
+  home = ["HTML"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]
+[params]
+  adsenseClient = ''
+  adsenseSlot = ''
+  description = "A blog about everything."
+  licence = "[Some Rights Reserved](http://creativecommons.org/licenses/by-sa/4.0/)."
+[permalinks]
+  posts = "/:year/:month/:day/:slug/"
+[pygmentsOptions]
+  linenos = false
