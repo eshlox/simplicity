@@ -1,0 +1,81 @@
+@mixin element-margin($rem, $important: false, $auto: true) {
+  @media (min-width: 0) {
+    @if $important == true {
+      margin-bottom: $rem * 0.5 !important;
+      margin-top: $rem * 0.5 !important;
+    }
+    @else {
+      margin-bottom: $rem * 0.5;
+      margin-top: $rem * 0.5;
+    }
+  }
+
+  @media (min-width: 576px) {
+    @if $important == true {
+      margin-bottom: $rem * 0.6 !important;
+      margin-top: $rem * 0.6 !important;
+    }
+    @else {
+      margin-bottom: $rem * 0.6;
+      margin-top: $rem * 0.6;
+    }
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    @if $important == true {
+      margin-bottom: $rem * 0.7 !important;
+      margin-top: $rem * 0.7 !important;
+    }
+    @else {
+      margin-bottom: $rem * 0.7;
+      margin-top: $rem * 0.7;
+    }
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    @if $important == true {
+      margin-bottom: $rem * 0.8 !important;
+      margin-top: $rem * 0.8 !important;
+    }
+    @else {
+      margin-bottom: $rem * 0.8;
+      margin-top: $rem * 0.8;
+    }
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    @if $important == true {
+      margin-bottom: $rem * 0.9 !important;
+      margin-top: $rem * 0.9 !important;
+    }
+    @else {
+      margin-bottom: $rem * 0.9;
+      margin-top: $rem * 0.9;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    @if $important == true {
+      margin-bottom: $rem !important;
+      margin-top: $rem !important;
+    }
+    @else {
+      margin-bottom: $rem;
+      margin-top: $rem;
+    }
+  }
+
+  @if $auto == true {
+    @if $important == true {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    @else {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
