@@ -33,6 +33,8 @@
   },
   "dependencies": {
     "baguettebox.js": "1.9.1",
-    "headroom.js": "^0.9.4"
+    "headroom.js": "^0.9.4",
+    "npm": "^6.0.0",
+    "vanilla-lazyload": "^8.7.1"
   }
 }
