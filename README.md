@@ -16,6 +16,8 @@ You can use shortcode to insert Adsense Ad whenever you want.
 Just add a Google Analytics code to turn it on.
 #### Lightbox
 Image shortcode allow to turn on [baguetteBox.js](https://feimosi.github.io/baguetteBox.js/) for given image.
+#### Syntax highlighting.
+Built-in Chroma Native color theme.
 #### Auto hide/show header
 This theme uses [headroom.js](http://wicky.nillia.ms/headroom.js/) script.
 #### Page scroll indicator
