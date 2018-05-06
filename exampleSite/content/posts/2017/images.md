@@ -65,3 +65,13 @@ Example code:
 Result:
 
 {{< image src="media/image-1.jpg" title="Photo by Ales Krivec on Unsplash" full="true" >}}
+
+Add `resize=false` parameter to display original image without resizing (useful for animated GIFs).
+
+```html
+{{</* image src="media/image-1.jpg" title="Photo by Ales Krivec on Unsplash" resize="false" */>}}
+```
+
+Result:
+
+{{< image src="media/image-1.jpg" title="Photo by Ales Krivec on Unsplash" resize="false" >}}
