@@ -1,21 +1,24 @@
-$breakpoint: 800px;
-
 $base-font-size: 18px;
 $base-line-height: 1.5;
-$base-background-color: #fefefe;
-$base-font-color: #454545;
+$breakpoint: 800px;
+$itemMargin: 1.5rem;
 
-$navbar-height: 3rem;
-$navbar-background-color: #f8f8f8;
-$navbar-icon-color: #000;
-$navbar-text-color: #000;
-
-$links-color: #39f;
-
-$color-white-smoke: #f8f8f8;
-$color-indian-red: #f0506e;
+$color-ancestral-water: #d0d0d0;
+$color-brilliant-azure: #39f;
+$color-bara-red: #f0506e;
+$color-black: #000;
+$color-lead: #202020;
+$color-machinegun-metal: #454545;
+$color-pale-grey: #fefefe;
 $color-silver: #c0c0c0;
-$color-dark-slate-gray: #202020;
-$color-light-gray: #d0d0d0;
+$color-zhen-zhu-bai-pearl: #f8f8f8;
 
-$itemMargin: 4rem;
+$base-background-color: $color-pale-grey;
+$base-font-color: $color-machinegun-metal;
+
+$navbar-background-color: $color-zhen-zhu-bai-pearl;
+$navbar-height: 3rem;
+$navbar-icon-color: $color-black;
+$navbar-text-color: $color-black;
+
+$links-color: $color-brilliant-azure;

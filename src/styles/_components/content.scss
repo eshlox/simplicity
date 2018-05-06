@@ -2,7 +2,8 @@ body {
   main {
     article {
       header {
-        margin-bottom: 3rem;
+        @include bottom-margin($itemMargin * 2);
+
         text-align: center;
 
         h1 {
@@ -11,8 +12,8 @@ body {
         }
 
         time {
-          font-size: 0.8rem;
           color: $color-silver;
+          font-size: 0.8rem;
         }
       }
 
@@ -22,7 +23,7 @@ body {
         blockquote {
           @include element-margin($itemMargin, false, true);
 
-          border-left: 0.3rem $color-silver solid;
+          border-left: 0.1rem $color-black solid;
           font-style: italic;
           width: 60%;
           padding: 1rem;
@@ -32,7 +33,6 @@ body {
           @include element-margin($itemMargin, false, true);
 
           padding: 0;
-          position: relative;
 
           &.full {
             left: 50%;
@@ -44,7 +44,11 @@ body {
           }
 
           img {
+            display: block;
+            height: auto;
             margin: 0 auto;
+            padding: 0;
+            width: 100%;
 
             &.full {
               left: 50%;
@@ -64,33 +68,39 @@ body {
         }
 
         h1 {
+          @include bottom-margin($itemMargin * 1.3);
+
           font-size: 2.5rem;
-          margin: $itemMargin*1.5 0 $itemMargin*0.6 0;
         }
 
         h2 {
+          @include bottom-margin($itemMargin * 1.2);
+
           font-size: 2rem;
-          margin: $itemMargin*1.4 0 $itemMargin*0.5 0;
         }
 
         h3 {
+          @include bottom-margin($itemMargin * 1.1);
+
           font-size: 1.5rem;
-          margin: $itemMargin*1.3 0 $itemMargin*0.4 0;
         }
 
         h4 {
+          @include bottom-margin($itemMargin);
+
           font-size: 1rem;
-          margin: $itemMargin*1.2 0 $itemMargin*0.3 0;
         }
 
         h5 {
+          @include bottom-margin($itemMargin * 0.9);
+
           font-size: 0.8rem;
-          margin: $itemMargin*1.1 0 $itemMargin*0.2 0;
         }
 
         h6 {
+          @include bottom-margin($itemMargin * 0.8);
+
           font-size: 0.6rem;
-          margin: $itemMargin 0 $itemMargin*0.1 0;
         }
 
         iframe.instagram-media {
@@ -102,7 +112,9 @@ body {
 
           display: block;
           height: auto;
-          max-width: 100%;
+          margin: 0 auto;
+          width: 100%;
+          padding: 0;
 
             &.full {
               left: 50%;
@@ -114,48 +126,41 @@ body {
             }
         }
 
-        video {
-          @include element-margin($itemMargin, false, true);
-
-          display: block;
-          width: 100%
-        }
-
         ol {
-          @include element-margin($itemMargin, false, false);
+          @include bottom-margin($itemMargin);
 
           padding: 0 0 0 20px;
         }
 
         p {
-          margin: $itemMargin*0.2 0 $itemMargin*0.5 0;
+          @include bottom-margin($itemMargin);
 
           code {
-            background-color: $color-white-smoke;
-            color: $color-indian-red;
+            background-color: $color-zhen-zhu-bai-pearl;
+            color: $color-bara-red;
             padding: 0.2rem 0.3rem;
           }
         }
 
         pre {
-          @include element-margin($itemMargin, false, true);
+          @include bottom-margin($itemMargin);
 
-          background-color: $color-dark-slate-gray;
-          color: $color-light-gray;
+          background-color: $color-lead;
+          color: $color-ancestral-water;
           display: grid;
           overflow: auto;
           padding: 0.5rem;
 
           code {
-            color: $color-light-gray;
-            background-color: $color-dark-slate-gray;
+            color: $color-ancestral-water;
+            background-color: $color-lead;
             font-size: $base-font-size * 0.8;
             min-width: 0;
           }
         }
 
         table:not(.highlight) {  // disable for table inside Github gist
-          @include element-margin($itemMargin, false, true);
+          @include bottom-margin($itemMargin);
 
           border-collapse: collapse;
           border-style: hidden;
@@ -185,13 +190,38 @@ body {
         }
 
         ul {
-          @include element-margin($itemMargin, false, false);
+          @include bottom-margin($itemMargin);
 
           padding: 0 0 0 20px;
 
           &.task-list {
             list-style: none;
             padding: 0;
+          }
+        }
+
+        video {
+          @include element-margin($itemMargin, false, true);
+
+          display: block;
+          width: 100%
+        }
+
+        .embed-container {
+          @include element-margin($itemMargin, false, true);
+
+          height: 0;
+          max-width: 100%;
+          overflow: hidden;
+          padding-bottom: 56.25%;
+          position: relative;
+
+          embed, iframe, object {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
           }
         }
 
@@ -210,19 +240,9 @@ body {
             width: 0 !important;
           }
         }
-
-        .vimeo {
-           @include element-margin($itemMargin, false, true);
-        }
-
-        .youtube {
-           @include element-margin($itemMargin, false, true);
-        }
       }
 
       footer {
-        @include element-margin($itemMargin, false, false);
-
         text-align: center;
 
         .meta {
@@ -237,9 +257,9 @@ body {
 
           .categories {
             a {
-              background-color: $links-color;
+              background-color: $color-brilliant-azure;
               border-radius: 0.2rem;
-              color: $color-white-smoke;
+              color: $color-zhen-zhu-bai-pearl;
               padding: 0.2rem 0.5rem;
             }
           }

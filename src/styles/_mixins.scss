@@ -79,3 +79,32 @@
     }
   }
 }
+
+@mixin bottom-margin($rem) {
+  @media (min-width: 0) {
+    margin-bottom: $rem * 0.5;
+  }
+
+  @media (min-width: 576px) {
+    margin-bottom: $rem * 0.6;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    margin-bottom: $rem * 0.7;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    margin-bottom: $rem * 0.8;
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    margin-bottom: $rem * 0.9;
+  }
+
+  @media (min-width: 1920px) {
+    margin-bottom: $rem;
+  }
+}
