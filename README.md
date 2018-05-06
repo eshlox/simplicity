@@ -3,47 +3,47 @@
 Very simple, clean and readable (I think so) Hugo theme.
 
 #### Responsive design
-Works on mobile, tablet and desktop.
+It works on mobile, tablet and desktop.
 #### Responsive images
-It generates several image sizes during build process and displays the best one for given device/resolution.
+It generates several image sizes during the build process and displays the best one for given device/resolution.
 #### Clean typography
 It should be a pleasure to read your blog, right?
 #### Additional shortcodes
 Shortcodes for Google Adsense, images, Speaker Deck, Video, Vimeo, Youtube.
 #### Google Adsense
-You can use shortcode to insert Adsense Ad whenever you want.
+You can use the shortcode to insert Adsense Ad wherever you want.
 #### Google Analytics
 Just add a Google Analytics code to turn it on.
 #### Lightbox
-Image shortcode allow to turn on [baguetteBox.js](https://feimosi.github.io/baguetteBox.js/) for given image.
+Image shortcode allows to turn on [baguetteBox.js](https://feimosi.github.io/baguetteBox.js/) for given image.
 #### Syntax highlighting.
 Built-in Chroma Native color theme.
-#### Auto hide/show header
+#### Auto-hide/show header
 This theme uses [headroom.js](http://wicky.nillia.ms/headroom.js/) script.
 #### Page scroll indicator
-Displays progress bar on the top of the page when user scroll the page.
+Displays progress bar on the top of the page when user scrolls the page.
 #### Disqus
 Just add a Disqus shortname to enable comments.
 #### Categories
-Separate page with list of all categories and list of posts for selected category.
+A separate page with a list of all categories and list of posts for a selected category.
 #### Tags
-Separate page with list of all categories and list of posts for selected tag.
+A separate page with a list of all categories and list of posts for a selected tag.
 #### RSS
 Custom RSS template without e-mail inside feed.
 #### Social icons
-Add an information about your social profile in config file to display it on the home page. Supported services: email, Facebook, Github, Google+, Linkedin, Messenger, Spotify, Stackoverflow, Telegram, Twitter.
+Add information about your social profile in the config file to display it on the homepage. Supported services: email, Facebook, Github, Google+, Linkedin, Messenger, Spotify, Stackoverflow, Telegram, Twitter.
 #### Gravatar support
 Just add your Gravatar email to the config file to display your avatar on the home page.
 #### and more
 - OpenGraph support
 - Schema Structured Data
 - Twitter card
-- Display licence in footer
+- Display license in footer
 - No JS frameworks, no CSS frameworks, no jQuery
 
 # Demo
 
-You can preview this theme on my personal blog - [eshlox.net](https://eshlox.net) or [eshlox.pl](https://eshlox.pl).
+You can preview this theme on my blogs - [eshlox.net](https://eshlox.net) or [eshlox.pl](https://eshlox.pl).
 
 ## Table of Contents
 
@@ -110,7 +110,7 @@ exampleSite/
                 └── image-1_hu3d03a01dcc18bc5be0e67db3d8d209a6_1073788_768x0_resize_q75_box.jpg
 ```
 
-Every `_index.md` file contains title, language and slug.
+Every `_index.md` file contains a title, language and slug.
 
 ### config.toml
 
@@ -126,7 +126,7 @@ This theme includes additional shortcodes.
 
 ### Adsense
 
-Add adsense configuration and use `{{< adsense >}}` in your post to display an ad.
+Add Adsense configuration and use `{{< adsense >}}` in your post to display an ad.
 
 ### Image
 
@@ -142,7 +142,7 @@ Lightbox:
 
 `{{< image src="media/image-1.jpg" lightbox="true" >}}`
 
-Insert image without resizing (the same image for all devices/resulotions).
+Insert image without resizing (the same image for all devices/resolutions).
 
 `{{< image src="media/image-1.jpg" resize="false" >}}`
 
