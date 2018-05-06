@@ -47,8 +47,8 @@ body {
             display: block;
             height: auto;
             margin: 0 auto;
+            max-width: 100%;
             padding: 0;
-            width: 100%;
 
             &.full {
               left: 50%;
@@ -113,7 +113,7 @@ body {
           display: block;
           height: auto;
           margin: 0 auto;
-          width: 100%;
+          max-width: 100%;
           padding: 0;
 
             &.full {
@@ -243,6 +243,8 @@ body {
       }
 
       footer {
+        @include element-margin($itemMargin * 2, false, false);
+
         text-align: center;
 
         .meta {
@@ -274,7 +276,7 @@ body {
         }
 
         #disqus_thread {
-          @include element-margin($itemMargin, false, true);
+          @include element-margin($itemMargin * 2, false, true);
         }
       }
     }

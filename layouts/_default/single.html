@@ -26,7 +26,6 @@
         <p class="tags">
           {{ if .Params.tags }}
             {{ range $index, $tag := .Params.tags }}
-              {{ if gt $index 0 }}, {{ end }}
               <a href="{{ $.LanguagePrefix }}{{ "tags/" | relURL }}{{ . | urlize }}">
                 <span>#</span>{{- . -}}
               </a>
