@@ -2,37 +2,37 @@
 
 Very simple, clean and readable (I think so) Hugo theme.
 
-## Responsive design
+#### Responsive design
 Works on mobile, tablet and desktop.
-## Responsive images
+#### Responsive images
 It generates several image sizes during build process and displays the best one for given device/resolution.
-## Clean typography
+#### Clean typography
 It should be a pleasure to read your blog, right?
-## Additional shortcodes
+#### Additional shortcodes
 Shortcodes for Google Adsense, images, Speaker Deck, Video, Vimeo, Youtube.
-## Google Adsense
+#### Google Adsense
 You can use shortcode to insert Adsense Ad whenever you want.
-## Google Analytics
+#### Google Analytics
 Just add a Google Analytics code to turn it on.
-## Lightbox
-Image shortcode allow to turn on ([baguetteBox.js](https://feimosi.github.io/baguetteBox.js/) for given image.
-## Auto hide/show header
-This theme uses ([headroom.js](http://wicky.nillia.ms/headroom.js/)) script.
-## Page scroll indicator
+#### Lightbox
+Image shortcode allow to turn on [baguetteBox.js](https://feimosi.github.io/baguetteBox.js/) for given image.
+#### Auto hide/show header
+This theme uses [headroom.js](http://wicky.nillia.ms/headroom.js/) script.
+#### Page scroll indicator
 Displays progress bar on the top of the page when user scroll the page.
-## Disqus
+#### Disqus
 Just add a Disqus shortname to enable comments.
-## Categories
+#### Categories
 Separate page with list of all categories and list of posts for selected category.
-## Tags
+#### Tags
 Separate page with list of all categories and list of posts for selected tag.
-## RSS
+#### RSS
 Custom RSS template without e-mail inside feed.
-## Social icons
+#### Social icons
 Add an information about your social profile in config file to display it on the home page. Supported services: email, Facebook, Github, Google+, Linkedin, Messenger, Spotify, Stackoverflow, Telegram, Twitter.
-## Gravatar support
+#### Gravatar support
 Just add your Gravatar email to the config file to display your avatar on the home page.
-## and more
+#### and more
 - OpenGraph support
 - Schema Structured Data
 - Twitter card
