@@ -144,7 +144,7 @@ Insert image without resizing (the same image for all devices/resulotions).
 
 `{{< image src="media/image-1.jpg" resize="false" >}}`
 
-### Speakcer Deck
+### Speaker Deck
 
 `{{< speakerdeck 50021f75cf1db900020005e7 >}}`
 
