@@ -29,7 +29,9 @@ A separate page with a list of all categories and list of posts for a selected c
 #### Tags
 A separate page with a list of all categories and list of posts for a selected tag.
 #### RSS
-Custom RSS template without e-mail inside feed.
+Custom RSS template without an e-mail address.
+#### Sitemap
+Custom sitemap template to prevent rendering content from media directory.
 #### Social icons
 Add information about your social profile in the config file to display it on the homepage. Supported services: email, Facebook, Github, Google+, Linkedin, Messenger, Spotify, Stackoverflow, Telegram, Twitter.
 #### Gravatar support
@@ -129,6 +131,15 @@ This theme includes additional shortcodes.
 Add Adsense configuration and use `{{< adsense >}}` in your post to display an ad.
 
 ### Image
+
+All images should be stored in `content/images` directory. Each subdirectory should contain `_index.md` file with this content:
+
+```
+---
+title: Media Folder
+---
+
+```
 
 Insert responsive image with title:
 
