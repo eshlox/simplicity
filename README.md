@@ -6,6 +6,8 @@ Very simple, clean and readable (I think so) Hugo theme.
 It works on mobile, tablet and desktop.
 #### Responsive images
 It generates several image sizes during the build process and displays the best one for given device/resolution.
+#### Lazy loading images
+This theme uses [LazyLoad](https://github.com/verlok/lazyload) to speed up your web application by loading images as they enter the viewport.
 #### Clean typography
 It should be a pleasure to read your blog, right?
 #### Additional shortcodes
