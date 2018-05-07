@@ -1,10 +1,5 @@
-.taxonomies {
-  padding: 0 $padding-left-right;
-
-  ul {
-    li {
-      color: $color-silver;
-      list-style-type: decimal;
-    }
+ul.taxonomies {
+  li {
+    color: $color-silver;
   }
 }

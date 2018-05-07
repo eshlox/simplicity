@@ -24,3 +24,6 @@ other = "You're logged in as"
 
 [404Page]
 other = "Just kidding. This page does not exist (404)."
+
+[pages]
+other = "Pages"

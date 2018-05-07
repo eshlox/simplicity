@@ -1,12 +1,3 @@
-.adsense {
-  text-align: center;
-
-  ins.adsbygoogle {
-    line-height: 1;
-    margin: 0 auto 3rem auto;
-
-    @media (max-width: 550px) {
-      margin: 0 auto 1.5rem auto;
-    }
-  }
+ins.adsbygoogle {
+  @include element-margin($itemMargin, false, true);
 }

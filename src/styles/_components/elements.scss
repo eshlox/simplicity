@@ -1,0 +1,20 @@
+ol.decimal-list {
+  list-style: none;
+  counter-reset: li;
+
+  li {
+    counter-increment: li;
+
+    &::before {
+      content: counter(li, decimal);
+      color: $color-silver;
+      direction: rtl;
+      display: inline-block;
+      font-size: 0.8rem;
+      margin-left: -1.5rem;
+      margin-right: 0.5rem;
+      text-align: right;
+      width: 1rem;
+    }
+  }
+}

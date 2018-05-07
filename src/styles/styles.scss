@@ -1,24 +1,19 @@
-@import "~node-normalize-scss/normalize";
+@import "~normalize.css/normalize";
+@import "~baguettebox.js/src/baguetteBox.scss";
 
 @import "settings";
 
-@import "mixins";
+@import "chroma_native";
+
+@import "_mixins";
 
 @import "_components/adsense";
 @import "_components/base";
 @import "_components/content";
+@import "_components/elements";
 @import "_components/footer";
 @import "_components/homepage";
-@import "_components/links";
 @import "_components/navbar";
-@import "_components/page";
-@import "_components/pagination";
-@import "_components/post";
 @import "_components/posts_list";
+@import "_components/progress_bar";
 @import "_components/taxonomies";
-@import "_components/taxonomies_list";
-@import "_components/typography";
-
-@import "chroma_native";
-
-@import "~baguettebox.js/src/baguetteBox.scss";

@@ -1,0 +1,8 @@
+{{ $src := (.Get "src") }}
+{{ $width := (.Get "width") }}
+{{ $height := (.Get "height") }}
+
+<video{{ if $width }} width="{{ $width }}"{{ end }}{{ if $height }} height="{{ $height }}"{{end}} controls>
+  <source src="{{ $src | relURL }}" type="video/mp4">
+  Your browser does not support the video tag.
+</video>

@@ -1,0 +1,121 @@
+{{ $src := (.Get "src") }}
+{{ $title := (.Get "title") }}
+{{ $full := (.Get "full") | default "false" }}
+{{ $lightbox := (.Get "lightbox") | default "false" }}
+{{ $resize := (.Get "resize") | default "true" }}
+
+{{ $fileName := index (last 1 (split $src "/")) 0 }}
+{{ $imageName := index (split $fileName ".") 0 }}
+{{ $section := replace $src (printf "/%s" $fileName) "" }}
+
+{{ with .Site.GetPage "section" $section }}
+  {{ $original := .Resources.GetMatch (printf "%s*" ($imageName)) }}
+
+  {{ if eq $resize "true" }}
+    {{ if gt $original.Width 320 }}
+      {{ $.Scratch.Set "resize_320" ($original.Resize "320x") }}
+    {{ else }}
+      {{ $.Scratch.Set "resize_320" ($original) }}
+    {{ end }}
+
+    {{ if gt ($original.Width) 480 }}
+      {{ $.Scratch.Set "resize_480" ($original.Resize "480x") }}
+    {{ else }}
+      {{ $.Scratch.Set "resize_480" ($original) }}
+    {{ end }}
+
+    {{ if gt ($original.Width) 768 }}
+      {{ $.Scratch.Set "resize_768" ($original.Resize "768x") }}
+    {{ else }}
+      {{ $.Scratch.Set "resize_768" ($original) }}
+    {{ end }}
+
+    {{ if gt ($original.Width) 1024 }}
+      {{ $.Scratch.Set "resize_1024" ($original.Resize "1024x") }}
+    {{ else }}
+      {{ $.Scratch.Set "resize_1024" ($original) }}
+    {{ end }}
+
+    {{ if gt ($original.Width) 1280 }}
+      {{ $.Scratch.Set "resize_1280" ($original.Resize "1280x") }}
+    {{ else }}
+      {{ $.Scratch.Set "resize_1280" ($original) }}
+    {{ end }}
+
+    {{ if gt ($original.Width) 1600 }}
+      {{ $.Scratch.Set "resize_1600" ($original.Resize "1600x") }}
+    {{ else }}
+      {{ $.Scratch.Set "resize_1600" ($original) }}
+    {{ end }}
+
+    {{ if gt ($original.Width) 1920 }}
+      {{ $.Scratch.Set "resize_1920" ($original.Resize "1920x") }}
+    {{ else }}
+      {{ $.Scratch.Set "resize_1920" ($original) }}
+    {{ end }}
+
+    <figure{{ if eq $full "true" }} class="full"{{ end }}>
+      {{ if eq $lightbox "true" }}
+        <a href="{{ $original.RelPermalink | relURL }}"{{ if $title }} title="{{ $title }}"{{ end }}>
+          <img
+            data-src="{{ $original.RelPermalink }}"
+            {{ if eq $full "true" }} class="full"{{ end }}
+            data-srcset="
+              {{ ($.Scratch.Get "resize_320").RelPermalink }} 320w,
+              {{ ($.Scratch.Get "resize_480").RelPermalink }} 480w,
+              {{ ($.Scratch.Get "resize_768").RelPermalink }} 768w,
+              {{ ($.Scratch.Get "resize_1024").RelPermalink }} 1024w,
+              {{ ($.Scratch.Get "resize_1280").RelPermalink }} 1280w,
+              {{ ($.Scratch.Get "resize_1600").RelPermalink }} 1600w,
+              {{ ($.Scratch.Get "resize_1920").RelPermalink }} 1920w
+            "
+            {{ if ($title) }}alt="{{ $title }}"{{ end }}
+          >
+        </a>
+      {{ else }}
+        <img
+          {{ if eq $full "true" }}class="full"{{ end }}
+          data-src="{{ $original.RelPermalink }}"
+          data-srcset="
+            {{ ($.Scratch.Get "resize_320").RelPermalink }} 320w,
+            {{ ($.Scratch.Get "resize_480").RelPermalink }} 480w,
+            {{ ($.Scratch.Get "resize_768").RelPermalink }} 768w,
+            {{ ($.Scratch.Get "resize_1024").RelPermalink }} 1024w,
+            {{ ($.Scratch.Get "resize_1280").RelPermalink }} 1280w,
+            {{ ($.Scratch.Get "resize_1600").RelPermalink }} 1600w,
+            {{ ($.Scratch.Get "resize_1920").RelPermalink }} 1920w
+          "
+          {{ if $title }}alt="{{ $title }}"{{ end }}
+        >
+      {{ end }}
+      {{ if $title }}<figcaption>{{ $title }}</figcaption>{{ end }}
+    </figure>
+
+    {{ $.Scratch.Delete "resize_320" }}
+    {{ $.Scratch.Delete "resize_480" }}
+    {{ $.Scratch.Delete "resize_768" }}
+    {{ $.Scratch.Delete "resize_1024" }}
+    {{ $.Scratch.Delete "resize_1280" }}
+    {{ $.Scratch.Delete "resize_1600" }}
+    {{ $.Scratch.Delete "resize_1920" }}
+  {{ else }}
+    <figure{{ if eq $full "true" }} class="full"{{ end }}>
+      {{ if eq $lightbox "true" }}
+        <a href="{{ $original.RelPermalink | relURL }}"{{ if $title }} title="{{ $title }}"{{ end }}>
+          <img
+            data-src="{{ $original.RelPermalink }}"
+            {{ if eq $full "true" }} class="full"{{ end }}
+            {{ if ($title) }}alt="{{ $title }}"{{ end }}
+          >
+        </a>
+      {{ else }}
+        <img
+          {{ if eq $full "true" }}class="full"{{ end }}
+          data-src="{{ $original.RelPermalink }}"
+          {{ if $title }}alt="{{ $title }}"{{ end }}
+        >
+      {{ end }}
+      {{ if $title }}<figcaption>{{ $title }}</figcaption>{{ end }}
+    </figure>
+  {{ end }}
+{{ end }}

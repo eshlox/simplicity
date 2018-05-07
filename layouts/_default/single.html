@@ -1,39 +1,39 @@
 {{ define "main" }}
+  <div class="progress-container">
+    <div class="progress-bar"></div>
+  </div>
   <article>
     <header>
-      <p>
-        <time datetime="{{ .Date.Format "2006-01-02 03:04" }}">
-          {{- .Date.Format "2006-01-02" -}}
-        </time>
-        {{- if .Params.categories }} &bull;
-          {{ range $index, $category := .Params.categories }}
-            {{ if gt $index 0 }}, {{ end }}
-            <a href="{{ $.LanguagePrefix }}{{ "/categories/" | relURL }}{{ . | urlize }}">{{- upper . -}}</a>
-          {{ end }}
-        {{- end -}}
-      </p>
-      <h1>
-        {{- .Title -}}
-      </h1>
-      <p>
-        {{ if .Params.tags }}
-          {{ range $index, $tag := .Params.tags }}
-            {{ if gt $index 0 }}, {{ end }}
-            <a href="{{ $.LanguagePrefix }}{{ "tags/" | relURL }}{{ . | urlize }}">
-              <span class="hash">#</span>{{- . -}}
-            </a>
-          {{ end }}
-        {{ end }}
-      </p>
+      <time datetime="{{ .Date.Format "2006-01-02 03:04" }}">
+        {{- .Date.Format "2006-01-02" -}}
+      </time>
+      <h1>{{- .Title -}}</h1>
     </header>
     <section>
-      {{ partial "adsense.html" . }}
       {{- .Content -}}
     </section>
     <footer>
-      {{ if .Site.Params.addThisId }}
-        <div class="addthis_inline_share_toolbox"></div>
-      {{ end }}
+      <hr>
+      <div class="meta">
+        <p class="categories">
+          {{- if .Params.categories }}
+            {{ range $index, $category := .Params.categories }}
+              {{ if gt $index 0 }}, {{ end }}
+              <a href="{{ $.LanguagePrefix }}{{ "/categories/" | relURL }}{{ . | urlize }}">{{- upper . -}}</a>
+            {{ end }}
+          {{- end -}}
+        </p>
+        <p class="tags">
+          {{ if .Params.tags }}
+            {{ range $index, $tag := .Params.tags }}
+              <a href="{{ $.LanguagePrefix }}{{ "tags/" | relURL }}{{ . | urlize }}">
+                <span>#</span>{{- . -}}
+              </a>
+            {{ end }}
+          {{ end }}
+        </p>
+      </div>
+      <hr>
       {{ template "_internal/disqus.html" . }}
     </footer>
   </article>
