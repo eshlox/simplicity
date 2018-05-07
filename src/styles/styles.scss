@@ -1,6 +1,9 @@
-@import "~node-normalize-scss/normalize";
+@import "~normalize.css/normalize";
+@import "~baguettebox.js/src/baguetteBox.scss";
 
 @import "settings";
+
+@import "chroma_native";
 
 @import "_mixins";
 
@@ -14,7 +17,3 @@
 @import "_components/posts_list";
 @import "_components/progress_bar";
 @import "_components/taxonomies";
-
-@import "chroma_native";
-
-@import "~baguettebox.js/src/baguetteBox.scss";
