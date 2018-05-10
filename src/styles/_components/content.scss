@@ -21,7 +21,7 @@ body {
         text-align: justify;
 
         blockquote {
-          @include element-margin($itemMargin, false, true);
+          @include element-margin($itemMargin * 2, false, true);
 
           border-left: 0.1rem $color-black solid;
           font-style: italic;
@@ -30,7 +30,7 @@ body {
         }
 
         figure {
-          @include element-margin($itemMargin, false, true);
+          @include element-margin($itemMargin * 2, false, true);
 
           padding: 0;
 
@@ -104,11 +104,11 @@ body {
         }
 
         iframe.instagram-media {
-          @include element-margin($itemMargin, true, true);
+          @include element-margin($itemMargin * 2, true, true);
         }
 
         img {
-          @include element-margin($itemMargin, false, true);
+          @include element-margin($itemMargin * 2, false, true);
 
           display: block;
           height: auto;
@@ -143,7 +143,7 @@ body {
         }
 
         pre {
-          @include bottom-margin($itemMargin);
+          @include element-margin($itemMargin * 2, false, false);
 
           background-color: $color-lead;
           color: $color-ancestral-water;
@@ -160,7 +160,7 @@ body {
         }
 
         table:not(.highlight) {  // disable for table inside Github gist
-          @include bottom-margin($itemMargin);
+          @include element-margin($itemMargin * 2, false, false);
 
           border-collapse: collapse;
           border-style: hidden;
@@ -201,14 +201,14 @@ body {
         }
 
         video {
-          @include element-margin($itemMargin, false, true);
+          @include element-margin($itemMargin * 2, false, true);
 
           display: block;
           width: 100%
         }
 
         .embed-container {
-          @include element-margin($itemMargin, false, true);
+          @include element-margin($itemMargin * 2, false, true);
 
           height: 0;
           max-width: 100%;
@@ -226,15 +226,15 @@ body {
         }
 
         .gist {
-          @include element-margin($itemMargin, false, true);
+          @include element-margin($itemMargin * 2, false, true);
         }
 
         .speakerdeck {
-           @include element-margin($itemMargin, false, true);
+           @include element-margin($itemMargin * 2, false, true);
         }
 
         .twitter-tweet {
-          @include element-margin($itemMargin, true, true);
+          @include element-margin($itemMargin * 2, true, true);
 
           @media (max-width: 550px) {
             width: 0 !important;

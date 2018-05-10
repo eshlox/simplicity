@@ -1,6 +1,8 @@
 body {
   main {
     .homepage-avatar {
+      @include element-margin($itemMargin, false, false);
+
       border-radius: 50%;
     }
 
