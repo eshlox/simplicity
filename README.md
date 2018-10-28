@@ -35,7 +35,7 @@ Custom RSS template without an e-mail address.
 #### Sitemap
 Custom sitemap template to prevent rendering content from media directory.
 #### Social icons
-Add information about your social profile in the config file to display it on the homepage. Supported services: email, Facebook, Github, Google+, Linkedin, Messenger, Spotify, Stackoverflow, Telegram, Twitter.
+Add information about your social profile in the config file to display it on the homepage. Supported services: email, Facebook, Github, Google+, LinkedIn, Messenger, Spotify, Stackoverflow, Telegram, Twitter.
 #### Gravatar support
 Just add your Gravatar email to the config file to display your avatar on the home page.
 #### and more
@@ -177,11 +177,13 @@ Insert image without resizing (the same image for all devices/resolutions).
 
 ## Development
 
-This theme uses `webpack`. You can install all required libraries using [yarn](https://github.com/yarnpkg/yarn), just run `yarn install`.
+1. Install dependencies.
 
-When you change SCSS or Javascript files, you can compile changes using `npm run build` command.
+```cd assets && yarn install```
 
-To review your changes, you can use `npm run start` command which will run `hugo serve` with content from `exampleSite`. 
+2. Run development server.
+
+```hugo server --source=exampleSite --themesDir=../..```
 
 ## Browsers support
 
@@ -195,6 +197,7 @@ Mobile:
 
 - Firefox (latest)
 - Chrome (latest)
+- Safari (latest)
 
 It probably works in other browsers but it hasn't been tested yet.
 

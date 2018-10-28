@@ -1,24 +1,30 @@
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{- .Title }} - {{ .Site.Title -}}</title>
-<meta name="author" content="{{ .Site.Author.name }}">
-<meta name="description" content="{{ .Site.Params.description }}">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{- .Title }} - {{ .Site.Title -}}</title>
+  <meta name="author" content="{{ .Site.Author.name }}">
+  <meta name="description" content="{{ .Site.Params.description }}">
 
-{{ .Hugo.Generator }}
+  {{ .Hugo.Generator }}
 
-<!-- CSS -->
-<link href="//fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
-<link rel="stylesheet" href='{{ print "/assets/css/" $.Site.Data.assets.main.css | relURL }}'>
+  <!-- CSS -->
+  {{ $options := (dict "targetPath" "assets/css/styles.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "assets/node_modules")) }}
+  {{ $styles := resources.Get "/src/styles/styles.scss" | resources.ToCSS $options }}
+  {{ $normalize := slice (resources.Get "/node_modules/normalize.css/normalize.css") | resources.Concat "assets/css/normalize.css" | resources.Minify }}
+  <link href="//fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
+  <link rel="stylesheet" href="{{ $normalize.Permalink }}" media="screen">
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 
-<!-- Icons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ print "/assets/img/apple-touch-icon.png" | relURL }}">
-<link rel="shortcut icon" href="{{ print "/assets/img/favicon.ico" | relURL }}">
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ print "/assets/img/apple-touch-icon.png" | relURL }}">
+  <link rel="shortcut icon" href="{{ print "/assets/img/favicon.ico" | relURL }}">
 
-<!-- RSS -->
-<link href="{{ $.LanguagePrefix }}{{ "/posts/index.xml" | relURL }}" rel="alternate" type="application/rss+xml" title="{{- .Site.Title -}}" />
-<link href="{{ $.LanguagePrefix }}{{ "/posts/index.xml" | relURL }}" rel="feed" type="application/rss+xml" title="{{- .Site.Title -}}" />
+  <!-- RSS -->
+  <link href="{{ $.LanguagePrefix }}{{ "/posts/index.xml" | relURL }}" rel="alternate" type="application/rss+xml" title="{{- .Site.Title -}}" />
+  <link href="{{ $.LanguagePrefix }}{{ "/posts/index.xml" | relURL }}" rel="feed" type="application/rss+xml" title="{{- .Site.Title -}}" />
 
-{{ template "_internal/opengraph.html" . }}
-{{ template "_internal/google_news.html" . }}
-{{ template "_internal/schema.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/google_news.html" . }}
+  {{ template "_internal/schema.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+</head>

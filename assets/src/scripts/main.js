@@ -1,9 +1,3 @@
-import '../styles/styles'
-
-import baguetteBox from 'baguettebox.js'
-import Headroom from 'headroom.js'
-import LazyLoad from 'vanilla-lazyload'
-
 document.addEventListener('DOMContentLoaded', function(event) {
   // LazdyLoad
   const myLazyLoad = new LazyLoad();

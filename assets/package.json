@@ -1,0 +1,17 @@
+{
+  "name": "simplicity",
+  "description": "Minimalist theme for Hugo",
+  "version": "2.0.2",
+  "author": {
+    "name": "Przemysław Kołodziejczyk",
+    "url": "https://eshlox.net"
+  },
+  "repository": "eshlox/simplicity",
+  "license": "MIT",
+  "dependencies": {
+    "baguettebox.js": "^1.11.0",
+    "headroom.js": "^0.9.4",
+    "normalize.css": "^8.0.0",
+    "vanilla-lazyload": "^10.18.0"
+  }
+}

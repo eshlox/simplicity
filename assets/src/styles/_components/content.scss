@@ -18,7 +18,7 @@ body {
       }
 
       section {
-        text-align: justify;
+        // text-align: justify;
 
         blockquote {
           @include element-margin($itemMargin * 2, false, true);
