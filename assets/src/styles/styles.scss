@@ -1,19 +1,9 @@
-// @import "typi/scss/typi";
 @import "baguetteBox.js/src/baguetteBox";
-
+@import "chroma_friendly";
 @import "settings";
-
-@import "chroma_native";
-
-@import "_mixins";
-
-@import "_components/adsense";
 @import "_components/base";
 @import "_components/content";
 @import "_components/elements";
 @import "_components/footer";
 @import "_components/homepage";
 @import "_components/navbar";
-@import "_components/posts_list";
-@import "_components/progress_bar";
-@import "_components/taxonomies";

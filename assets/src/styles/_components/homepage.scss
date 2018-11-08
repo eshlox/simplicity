@@ -1,61 +1,8 @@
 body {
   main {
     .homepage-avatar {
-      @include element-margin($itemMargin, false, false);
-
       border-radius: 50%;
-    }
-
-    .social-icons {
-      a {
-        background-color: $color-silver;
-        display: inline-block;
-        height: 20px;
-        margin: 0.1rem;
-        padding: 5px;
-        width: 20px;
-
-        svg {
-          fill: #fff;
-        }
-
-        &.email {
-          background-color: #D14836;
-        }
-        &.telegram {
-          background-color: #2CA5E0;
-        }
-        &.twitter {
-          background-color: #1DA1F2;
-        }
-        &.github {
-          background-color: #181717;
-        }
-        &.stackoverflow {
-          background-color: #FE7A16;
-        }
-        &.spotify {
-          background-color: #1ED760;
-        }
-        &.google-plus {
-          background-color: #DC4E41;
-        }
-        &.linkedin {
-          background-color: #0077B5;
-        }
-        &.messenger {
-          background-color: #0084FF;
-        }
-        &.facebook {
-          background-color: #3B5998;
-        }
-        &.rss {
-          background-color: #FFA500;
-        }
-        &.gitlab {
-          background-color: #E24329;
-        }
-      }
+      margin-bottom: 2rem;
     }
   }
 }

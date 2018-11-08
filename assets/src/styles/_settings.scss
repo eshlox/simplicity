@@ -1,48 +1,17 @@
-$base-font-size: 18px;
-$base-line-height: 1.5;
 $breakpoint: 800px;
-$itemMargin: 1.5rem;
+$itemMargin: 2.5rem;
 
-$color-ancestral-water: #d0d0d0;
 $color-brilliant-azure: #39f;
 $color-bara-red: #f0506e;
 $color-black: #000;
-$color-lead: #202020;
-$color-machinegun-metal: #454545;
 $color-pale-grey: #fefefe;
 $color-silver: #c0c0c0;
 $color-zhen-zhu-bai-pearl: #f8f8f8;
 
 $base-background-color: $color-pale-grey;
-$base-font-color: $color-machinegun-metal;
 
 $navbar-background-color: $color-zhen-zhu-bai-pearl;
-$navbar-height: 3rem;
-$navbar-icon-color: $color-black;
+$navbar-height: 5rem;
 $navbar-text-color: $color-black;
 
 $links-color: $color-brilliant-azure;
-
-// $breakpoints: (
-//   small: 600px,
-//   large: 1200px
-// );
-
-// $typi: (
-//   base: (
-//     null: (16px, 1.4),
-//     small: (18px),
-//     large: (20px)
-//   ),
-//   h1: (
-//     null: (24px, 1.3),
-//     small: (2.369em, 1.2),
-//   )
-//   // Other font maps here
-// );
-
-// @include typi-init;
-
-// h1 {
-//   @include typi('h1');
-// }

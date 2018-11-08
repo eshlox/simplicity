@@ -8,12 +8,14 @@
   {{ .Hugo.Generator }}
 
   <!-- CSS -->
+  {{ $normalize := slice (resources.Get "/node_modules/normalize.css/normalize.css") | resources.Concat "assets/css/normalize.css" | resources.Minify }}
+  {{ $milligram := resources.Get "/node_modules/milligram/src/milligram.sass" | resources.ToCSS (dict "targetPath" "assets/css/milligram.css" "outputStyle" "compressed" "enableSourceMap" true) }}
   {{ $options := (dict "targetPath" "assets/css/styles.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "assets/node_modules")) }}
   {{ $styles := resources.Get "/src/styles/styles.scss" | resources.ToCSS $options }}
-  {{ $normalize := slice (resources.Get "/node_modules/normalize.css/normalize.css") | resources.Concat "assets/css/normalize.css" | resources.Minify }}
   <link href="//fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
-  <link rel="stylesheet" href="{{ $normalize.Permalink }}" media="screen">
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+  <link rel="stylesheet" href="{{ $normalize.RelPermalink }}" media="screen">
+  <link rel="stylesheet" href="{{ $milligram.RelPermalink }}" media="screen">
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ print "/assets/img/apple-touch-icon.png" | relURL }}">

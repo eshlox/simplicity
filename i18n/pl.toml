@@ -7,23 +7,11 @@ other = "Lista postów"
 [homePage]
 other = "Strona główna"
 
-[previous]
-other = "poprzednie"
-
-[next]
-other = "następne"
-
 [categories]
 other = "Kategorie"
 
 [tags]
 other = "Tagi"
-
-[loggedAs]
-other = "Jesteś zalogowany jako"
-
-[404Page]
-other = "Żartuję. Ta strona nie istnieje (404)."
 
 [pages]
 other = "Strony"

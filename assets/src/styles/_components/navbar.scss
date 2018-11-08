@@ -1,7 +1,7 @@
 body {
   nav {
     align-items: center;
-    background-color: $navbar-background-color;
+    background-color: #f4f5f6;
     color: $navbar-text-color;
     display: flex;
     height: $navbar-height;
@@ -12,6 +12,7 @@ body {
     right: 0;
     top: 0;
     z-index: 10;
+    border-bottom: .1rem solid #d1d1d1;
 
     a {
       color: $navbar-text-color;
@@ -19,17 +20,6 @@ body {
 
       &:hover, &:active, &:visited {
         text-decoration: none;
-      }
-    }
-
-    a.homePageIcon {
-      height: 1.5rem;
-      width: 1.5rem;
-
-      svg {
-        fill: $navbar-icon-color;
-        height: 1.5rem;
-        width: 1.5rem;
       }
     }
 

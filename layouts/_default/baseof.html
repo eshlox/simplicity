@@ -2,18 +2,22 @@
 <html lang="{{ or .Params.language .Site.LanguageCode }}">
   {{ partial "head.html" . }}
   <body>
-    {{ partial "navbar.html" . }}
-    <main>
+    {{ if not .IsHome }}
+      {{ partial "navbar.html" . }}
+    {{ end }}
+    <main class="container{{ if .IsHome }} home{{ end }}">
       {{ block "main" . -}}{{- end }}
     </main>
-    {{ partial "footer.html" . }}
+    {{ if not .IsHome }}
+      {{ partial "footer.html" . }}
+    {{ end }}
     <!-- JS -->
     {{ $baguetteBox := resources.Get "/node_modules/baguetteBox.js/src/baguetteBox.js" }}
     {{ $headroom := resources.Get "/node_modules/headroom.js/dist/headroom.js" }}
     {{ $lazyload := resources.Get "/node_modules/vanilla-lazyload/dist/lazyload.js" }}
     {{ $main := resources.Get "/src/scripts/main.js" }}
     {{ $scripts := slice $baguetteBox $headroom $lazyload $main | resources.Concat "assets/js/scripts.js" | resources.Minify }}
-    <script src="{{ $scripts.Permalink }}"></script>
+    <script src="{{ $scripts.RelPermalink }}"></script>
     {{ template "_internal/google_analytics_async.html" . }}
   </body>
 </html>

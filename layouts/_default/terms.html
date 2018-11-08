@@ -1,12 +1,15 @@
 {{ define "main" }}
-  <h1>{{ i18n (lower .Data.Plural) . }}</h1>
-  <ol class="decimal-list">
+  <h2>{{ i18n (lower .Data.Plural) . }}</h2>
+  <hr>
+  <ol>
     {{ range .Data.Terms.Alphabetical }}
       <li>
         <a href="{{ $.LanguagePrefix }}/{{ $.Data.Plural }}/{{ .Term | urlize }}">
           {{ .Term }}
         </a>
-        <sup>{{ .Count }}</sup>
+        <sup>
+          {{ .Count }}
+        </sup>
       </li>
     {{ end }}
   </ol>

@@ -1,13 +1,21 @@
 body {
   > footer {
-    align-items: center;
-    background-color: $navbar-background-color;
+    align-items: right;
     color: $navbar-text-color;
     display: flex;
-    font-size: $base-font-size * 0.8;
+    font-size: 0.8em;
     justify-content: space-between;
-    padding: 0.1rem 1rem;
+    padding: 0.5rem;
     text-align: center;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    // height: 3rem;
+    // @media screen and (max-width: $breakpoint) {
+    //   height: 5rem;
+    // }
 
     @media screen and (max-width: $breakpoint) {
       flex-direction: column;

@@ -1,4 +1,4 @@
-baseURL = "https://example.org/"
+baseURL = "https://example.com"
 defaultContentLanguage = "en"
 disqusShortname = "test"
 enableEmoji = true
@@ -11,20 +11,10 @@ pygmentsUseClasses =  true
 theme = "simplicity"
 title = "Simplicity - Hugo theme"
 [author]
-  email = "#"
-  facebook = "#"
-  github = "#"
-  google_plus = "#"
   gravatarEmail = "test@example.com"
   homepageText = "Simplicity"
-  linkedin = "#"
-  messenger = "#"
   name = "Przemysław `eshlox` Kołodziejczyk"
   rss = "/posts/index.xml"
-  spotify = "#"
-  stackoverflow = "#"
-  telegram = "#"
-  twitter = "#"
 [imaging]
   anchor = "smart"
   resampleFilter = "box"
@@ -50,6 +40,7 @@ title = "Simplicity - Hugo theme"
   adsenseSlot = ''
   description = "A blog about everything."
   licence = "[Some Rights Reserved](http://creativecommons.org/licenses/by-sa/4.0/)."
+  displayPostLanguage = true
 [permalinks]
   posts = "/:year/:month/:day/:slug/"
 [pygmentsOptions]
