@@ -12,6 +12,8 @@ body {
 
       section {
         figure {
+          margin: $itemMargin 0;
+
           &.full {
             left: 50%;
             margin-left: -50vw;
