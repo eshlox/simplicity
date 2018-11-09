@@ -12,9 +12,9 @@
       {{ partial "footer.html" . }}
     {{ end }}
     <!-- JS -->
-    {{ $baguetteBox := resources.Get "/node_modules/baguetteBox.js/src/baguetteBox.js" }}
-    {{ $headroom := resources.Get "/node_modules/headroom.js/dist/headroom.js" }}
-    {{ $lazyload := resources.Get "/node_modules/vanilla-lazyload/dist/lazyload.js" }}
+    {{ $baguetteBox := resources.Get "/src/scripts/_external/baguetteBox.js" }}
+    {{ $headroom := resources.Get "/src/scripts/_external/headroom.js" }}
+    {{ $lazyload := resources.Get "/src/scripts/_external/lazyload.js" }}
     {{ $main := resources.Get "/src/scripts/main.js" }}
     {{ $scripts := slice $baguetteBox $headroom $lazyload $main | resources.Concat "assets/js/scripts.js" | resources.Minify }}
     <script src="{{ $scripts.RelPermalink }}"></script>

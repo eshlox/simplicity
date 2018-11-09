@@ -8,14 +8,17 @@
   {{ .Hugo.Generator }}
 
   <!-- CSS -->
-  {{ $normalize := slice (resources.Get "/node_modules/normalize.css/normalize.css") | resources.Concat "assets/css/normalize.css" | resources.Minify }}
-  {{ $milligram := resources.Get "/node_modules/milligram/src/milligram.sass" | resources.ToCSS (dict "targetPath" "assets/css/milligram.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+  {{ $normalize := resources.Get "/src/styles/_external/normalize.css" }}
+  {{ $milligram := resources.Get "/src/styles/_external/milligram.css" }}
+  {{ $baguetteBox := resources.Get "/src/styles/_external/baguetteBox.css" }}
+  {{ $external := slice $normalize $milligram $baguetteBox | resources.Concat "assets/css/external.css" | resources.Minify }}
+  <link rel="stylesheet" href="{{ $external.RelPermalink }}" media="screen">
+
   {{ $options := (dict "targetPath" "assets/css/styles.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "assets/node_modules")) }}
   {{ $styles := resources.Get "/src/styles/styles.scss" | resources.ToCSS $options }}
-  <link href="//fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
-  <link rel="stylesheet" href="{{ $normalize.RelPermalink }}" media="screen">
-  <link rel="stylesheet" href="{{ $milligram.RelPermalink }}" media="screen">
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+
+  <link href="//fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ print "/assets/img/apple-touch-icon.png" | relURL }}">

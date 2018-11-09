@@ -1,7 +1,7 @@
 /*!
 * baguetteBox.js
 * @author feimosi
-* @version %%INJECT_VERSION%%
+* @version 1.11.0
 * @url https://github.com/feimosi/baguetteBox.js
 */(function(root,factory){'use strict';if(typeof define==='function'&&define.amd){define(factory);}else if(typeof exports==='object'){module.exports=factory();}else{root.baguetteBox=factory();}}(this,function(){'use strict';var leftArrow='<svg width="44" height="60">'+
 '<polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"'+
