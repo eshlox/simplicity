@@ -23,6 +23,19 @@ if filename and os.path.isfile(filename):
 ```python
 import os
 
+# Very long line, very long line, very long line, very long line, very long line, very long line, very long line, very long line.
+filename = os.environ.get('PYTHONSTARTUP')
+if filename and os.path.isfile(filename):
+    with open(filename) as fobj:
+        startup_file = fobj.read()
+    exec(startup_file)
+```
+
+---
+
+```python
+import os
+
 filename = os.environ.get('PYTHONSTARTUP')
 if filename and os.path.isfile(filename):
     with open(filename) as fobj:

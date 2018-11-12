@@ -63,9 +63,11 @@ body {
           }
         }
 
-        div.highlight {
-          pre {
-            border-left: 0.3rem solid $links-color;
+        pre {
+          border-left: 0.3rem solid $links-color;
+
+          code {
+            background-color: transparent;
           }
         }
 
