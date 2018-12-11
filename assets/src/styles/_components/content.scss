@@ -78,6 +78,17 @@ body {
             min-width: 0;
           }
         }
+
+        .gist {
+          width: 100%;
+
+          & table {
+            table-layout: fixed;
+          }
+
+          & td.js-line-number{
+            width: 50px;
+            text-align: center;
           }
         }
 
