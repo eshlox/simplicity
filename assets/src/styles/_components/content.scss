@@ -70,9 +70,14 @@ body {
 
         pre {
           border-left: 0.3rem solid $links-color;
+          display: grid;
+          // overflow: auto;
 
           code {
             background-color: transparent;
+            min-width: 0;
+          }
+        }
           }
         }
 
