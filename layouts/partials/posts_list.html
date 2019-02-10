@@ -1,8 +1,8 @@
 <h2>
   {{ if eq .Kind "section" }}
-    {{ i18n "postsList" . }}
+  {{ i18n "postsList" . }}
   {{ else }}
-    {{ i18n "postsAbout" }} {{ .Title }}
+  {{ i18n "postsAbout" }} {{ .Title }}
   {{ end }}
   <small>
     - <a href="{{ .RSSLink | relURL }}" class="rss" title="RSS">RSS</a>
@@ -10,16 +10,16 @@
 </h2>
 <hr>
 {{ range (where .Data.Pages "Type" "posts").GroupByDate "2006" }}
-  <h3 id="{{ .Key }}">
-    {{ .Key }}
-  </h3>
-  <ul class="posts-list">
-    {{ range .Pages }}
-      <li>
-        <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
-        <a href="{{ .RelPermalink | relURL }}" title="{{ .Title }}">{{ .Title }}</a>
-        {{ if .Site.Params.displayPostLanguage }}<span class="lang">/ {{ .Lang }}</span>{{ end }}
-      </li>
-    {{ end }}
-  </ul>
+<h3 id="{{ .Key }}">
+  {{ .Key }}
+</h3>
+<ul class="posts-list">
+  {{ range .Pages }}
+  <li>
+    <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+    <a href="{{ .RelPermalink | relURL }}" title="{{ .Title }}">{{ .Title }}</a>
+    {{ if .Site.Params.displayPostLanguage }}<span class="lang">/ {{ .Params.language }}</span>{{ end }}
+  </li>
+  {{ end }}
+</ul>
 {{ end }}
