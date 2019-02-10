@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ or .Params.language .Site.LanguageCode }}">
+<html lang="{{ or .Params.language .Site.LanguageCode }}" itemscope itemtype="http://schema.org/WebPage">
   {{ partial "head.html" . }}
   <body>
     {{ if not .IsHome }}
