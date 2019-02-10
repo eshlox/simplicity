@@ -26,7 +26,7 @@
 
   <!-- RSS -->
   <link href="{{ $.LanguagePrefix }}{{ "/posts/index.xml" | relURL }}" rel="alternate" type="application/rss+xml" title="{{- .Site.Title -}}" />
-  <link href="{{ $.LanguagePrefix }}{{ "/posts/index.xml" | relURL }}" rel="feed" type="application/rss+xml" title="{{- .Site.Title -}}" />
+  <link href="{{ $.LanguagePrefix }}{{ "/posts/index.xml" | relURL }}" rel="alternate" type="application/rss+xml" title="{{- .Site.Title -}}" />
 
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/google_news.html" . }}
