@@ -155,6 +155,10 @@ Lightbox:
 
 `{{< image src="media/image-1.jpg" lightbox="true" >}}`
 
+Rounded corners:
+
+`{{< image src="media/image-1.jpg" round="50" >}}`
+
 Insert image without resizing (the same image for all devices/resolutions).
 
 `{{< image src="media/image-1.jpg" resize="false" >}}`
