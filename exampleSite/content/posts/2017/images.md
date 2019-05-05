@@ -54,6 +54,19 @@ Result (click on the image):
 
 {{< image src="media/image-1.jpg" title="Photo by Ales Krivec on Unsplash" lightbox="true" >}}
 
+You can add ```round="50"``` parameter to round the corners from 0% to 50%(full circle).
+
+Example code:
+
+```html
+{{</* image src="media/image-1.jpg" title="Photo by Ales Krivec on Unsplash" lightbox="true" round="50" */>}}
+```
+
+Result (you can still click on it):
+
+{{< image src="media/image-1.jpg" title="Photo by Ales Krivec on Unsplash" lightbox="true" round="50" >}}
+
+
 You can add `full="true"` parameter to display image with full width.
 
 Example code:
