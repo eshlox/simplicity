@@ -21,8 +21,10 @@
   <link href="//fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ print "/assets/img/apple-touch-icon.png" | relURL }}">
-  <link rel="shortcut icon" href="{{ print "/assets/img/favicon.ico" | relURL }}">
+  {{ $touchicon := resources.Get "/src/images/apple-touch-icon.png" }}
+  {{ $favicon := resources.Get "/src/images/favicon.ico" }}
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ $touchicon.RelPermalink }}">
+  <link rel="shortcut icon" href="{{ $favicon.RelPermalink }}">
 
   <!-- RSS -->
   <link href="{{ $.LanguagePrefix }}{{ "/posts/index.xml" | relURL }}" rel="alternate" type="application/rss+xml" title="{{- .Site.Title -}}" />
