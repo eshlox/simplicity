@@ -5,8 +5,8 @@
         <time datetime="{{ .Date.Format "2006-01-02 15:04:05-0700" }}">
           {{- .Date.Format "2006-01-02" -}}
         </time>
-        &bull;
-        {{- if .Params.categories }}
+         {{- if .Params.categories }}
+          &bull;
           {{ range $index, $category := .Params.categories }}
             {{ if gt $index 0 }}, {{ end }}
             <a href="{{ $.LanguagePrefix }}{{ "/categories/" | relURL }}{{ . | urlize }}">{{- upper . -}}</a>
