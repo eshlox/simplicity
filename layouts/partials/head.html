@@ -18,7 +18,7 @@
   {{ $styles := resources.Get "/src/styles/styles.scss" | resources.ToCSS $options }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
 
-  <link href="//fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
 
   <!-- Icons -->
   {{ $touchicon := resources.Get "/src/images/apple-touch-icon.png" }}
